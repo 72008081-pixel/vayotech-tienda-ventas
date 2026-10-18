@@ -1,15 +1,303 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070b17"><meta name="description" content="VayoTech Cusco: audífonos KZ y accesorios. Elige, añade al carrito y coordina por WhatsApp."><title>VayoTech Cusco · Audio KZ</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css?v=3"><script src="app.js?v=3" defer></script></head>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b17">
+  <meta name="description" content="VayoTech Cusco: Tienda oficial de audífonos KZ, monitores in-ear, módulos Bluetooth TWS y repuestos con stock disponible en Cusco y envíos a todo el Perú.">
+  <title>VayoTech Cusco · Tienda de Audio KZ & Catálogo Oficial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=5">
+  <script src="app.js?v=5" defer></script>
+</head>
 <body>
-<div class="topline"><span>Audio KZ en Cusco</span><span>Entrega en Cusco y envíos a todo el Perú</span><span>Atención personal por WhatsApp</span></div>
-<header class="header"><nav class="nav wrap" aria-label="Navegación principal"><a class="logo" href="#inicio" aria-label="VayoTech, inicio"><span class="logo-mark">V<span class="logo-dot"></span></span><span>VAYO<span class="logo-accent">TECH</span><small>CUSCO · AUDIO & TECH</small></span></a><div class="navlinks"><a href="#disponibles">En stock</a><a href="#catalogo">Catálogo completo</a><a href="#entregas">Entregas</a></div><button class="cart-trigger" id="openCart" type="button" aria-label="Abrir carrito"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.3 11h11.2l2-8H6M9 20h.01M18 20h.01"/></svg><span>Mi carrito</span><b id="cartCount">0</b></button></nav></header>
-<main id="inicio"><section class="hero wrap"><div class="hero-copy"><div class="overline"><i></i> VAYOTECH CUSCO · AUDIO KZ</div><h1>Tu música merece <em>sonar increíble.</em></h1><p>Audífonos y accesorios seleccionados para disfrutar cada detalle. Elige tus productos, arma tu pedido y coordina directamente con nosotros por WhatsApp.</p><div class="hero-actions"><a class="button primary" href="#disponibles">Comprar en stock <span aria-hidden="true">→</span></a><a class="button subtle" href="#catalogo">Ver catálogo completo</a></div><div class="hero-facts"><span><b>19</b> unidades disponibles</span><span><b>6</b> productos para entrega actual</span><span><b>Cusco</b> y todo el Perú</span></div></div><div class="hero-visual"><div class="visual-glow"></div><div class="visual-ring"></div><img src="images/real_edx_pro.jpg" alt="Audífonos KZ EDX Pro disponibles en VayoTech" fetchpriority="high"><div class="hero-sticker"><span>DESTACADO</span><strong>KZ EDX Pro</strong><small>Desde S/ 39.00</small></div></div></section>
-<section class="benefits wrap" aria-label="Cómo comprar"><div><span class="benefit-icon">01</span><strong>Elige a tu ritmo</strong><small>Revisa detalles, fotos y precios.</small></div><div><span class="benefit-icon">02</span><strong>Arma tu carrito</strong><small>Ajusta cantidades según stock.</small></div><div><span class="benefit-icon">03</span><strong>Coordina por WhatsApp</strong><small>Confirma entrega y envío con nosotros.</small></div></section>
-<section class="sale wrap"><div><span class="sale-label">SELECCIÓN DISPONIBLE AHORA</span><h2>Encuentra tu próximo sonido.</h2><p>Unidades limitadas del inventario actual. La disponibilidad final se confirma al coordinar el pedido.</p></div><div class="sale-count"><span>Promoción del día termina en</span><strong id="countdown">--:--:--</strong><small>El contador reinicia diariamente; los precios se confirman por WhatsApp.</small></div></section>
-<section class="shop wrap" id="disponibles"><div class="section-head"><div><span class="kicker">LISTO PARA PEDIR</span><h2>En stock para venta ahora</h2><p>6 productos · 19 unidades registradas. Selecciona y añade al carrito.</p></div><span class="stock-pill"><i></i> Stock actual</span></div><div class="shop-tools"><label class="searchbox"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg><input id="search" type="search" placeholder="Buscar audífonos o accesorios" aria-label="Buscar en stock"></label><div class="filters" aria-label="Filtrar productos"><button class="filter active" data-filter="all" type="button">Todos</button><button class="filter" data-filter="audifonos" type="button">Audífonos</button><button class="filter" data-filter="accesorios" type="button">Accesorios</button></div><label class="sort-label">Ordenar <select id="sort" aria-label="Ordenar productos"><option value="featured">Destacados</option><option value="low">Menor precio</option><option value="high">Mayor precio</option></select></label></div><p id="resultCount" class="results" aria-live="polite"></p><div class="product-grid" id="stockGrid"></div></section>
-<section class="catalog-section" id="catalogo"><div class="wrap"><div class="section-head"><div><span class="kicker">EXPLORA MÁS</span><h2>Nuestro catálogo completo</h2><p>Modelos que hemos presentado en VayoTech. Consulta disponibilidad y precio actualizado antes de pedir.</p></div><span class="catalog-pill">Modelos para consultar</span></div><div class="catalog-grid" id="catalogGrid"></div></div></section>
-<section class="delivery wrap" id="entregas"><div><span class="kicker">COMPRAR ES SENCILLO</span><h2>Entrega coordinada contigo.</h2><p>En Cusco acordamos el punto y horario. Para otras ciudades coordinamos agencia y costo de envío antes de confirmar tu compra.</p><a class="button whatsapp" href="https://wa.me/51933685462?text=Hola%20VayoTech%2C%20quiero%20consultar%20sobre%20sus%20productos." target="_blank" rel="noopener">Consultar por WhatsApp ↗</a></div><div class="delivery-box"><div><span>01</span><p><b>Cusco</b><small>Coordina distrito, punto y horario de entrega.</small></p></div><div><span>02</span><p><b>Envíos nacionales</b><small>Nos indicas ciudad y agencia preferida.</small></p></div><div><span>03</span><p><b>Confirmación personal</b><small>Revisamos disponibilidad, total y envío contigo.</small></p></div></div></section></main>
-<footer><div class="wrap footer-inner"><div class="footer-brand"><strong>VAYO<span>TECH</span></strong><p>Audio y tecnología desde Cusco, Perú.</p></div><p>Precios en soles. El stock y costo de envío se confirman antes de cerrar el pedido.</p><a href="https://wa.me/51933685462" target="_blank" rel="noopener">WhatsApp: +51 933 685 462 ↗</a></div></footer>
-<div class="scrim" id="scrim" hidden></div><aside class="drawer" id="drawer" aria-label="Carrito de compras" aria-modal="true" role="dialog" hidden><div class="drawer-head"><div><span class="kicker">TU SELECCIÓN</span><h2>Mi carrito <span id="drawerCount">0</span></h2></div><button class="close" id="closeCart" type="button" aria-label="Cerrar carrito">×</button></div><div class="drawer-scroll"><div id="cartItems"></div><div id="checkout" hidden><div class="total"><span>Subtotal de productos</span><strong id="subtotal">S/ 0.00</strong></div><p class="total-note">El costo de envío se acuerda por WhatsApp.</p><h3>Datos para coordinar</h3><form id="orderForm"><label>Tu nombre<input id="customer" name="customer" autocomplete="name" required placeholder="¿Cómo te llamas?"></label><label>Tu teléfono<input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="Número de contacto"></label><label>Tipo de entrega<select id="delivery" name="delivery"><option value="Entrega en Cusco">Entrega en Cusco</option><option value="Envío nacional">Envío nacional</option></select></label><label>Distrito, dirección o ciudad y agencia<textarea id="destination" name="destination" required rows="2" placeholder="Ej. San Sebastián, Cusco / Arequipa, agencia Olva"></textarea></label><button class="button primary checkout-button" type="submit">Continuar por WhatsApp <span aria-hidden="true">↗</span></button><p class="privacy-note">Se abrirá WhatsApp con tu pedido listo. Tú decides cuándo enviarlo.</p></form></div></div></aside>
-<div class="modal-backdrop" id="modalBackdrop" hidden><div class="modal" role="dialog" aria-modal="true" aria-label="Detalle de producto"><button class="close modal-close" id="closeModal" type="button" aria-label="Cerrar detalle">×</button><div id="modalContent"></div></div></div><div class="toast" id="toast" role="status" aria-live="polite"></div><a class="help" href="https://wa.me/51933685462?text=Hola%20VayoTech%2C%20necesito%20ayuda%20para%20elegir%20un%20producto." target="_blank" rel="noopener" aria-label="Hablar con VayoTech por WhatsApp"><span>¿Te ayudamos?</span><b>WhatsApp ↗</b></a>
-</body></html>
+
+  <!-- Top Announcement Bar -->
+  <aside class="topline">
+    <span>🎧 Audio KZ Oficial en Cusco</span>
+    <span>⚡ 20 unidades con entrega inmediata en Cusco</span>
+    <span>📦 Envíos rápidos y seguros a todo el Perú</span>
+  </aside>
+
+  <!-- Main Navigation Bar -->
+  <header class="header">
+    <nav class="nav wrap" aria-label="Navegación principal">
+      <a class="logo" href="#inicio" aria-label="VayoTech, volver al inicio">
+        <span class="logo-mark">V<span class="logo-dot"></span></span>
+        <span>VAYO<span class="logo-accent">TECH</span><small>CUSCO · AUDIO & TECH</small></span>
+      </a>
+
+      <div class="navlinks">
+        <a href="#disponibles" data-jump-tab="stock">⚡ En stock (20)</a>
+        <a href="#disponibles" data-jump-tab="catalog">📖 Catálogo (21)</a>
+        <a href="#entregas">🚚 Entregas</a>
+      </div>
+
+      <button class="cart-trigger" id="openCart" type="button" aria-label="Abrir mi carrito">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 4h2l2.3 11h11.2l2-8H6M9 20h.01M18 20h.01"/>
+        </svg>
+        <span>Mi carrito</span>
+        <b id="cartCount">0</b>
+      </button>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <!-- Hero Showcase Section -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="overline"><i></i> VAYOTECH CUSCO · AUDIO KZ HI-FI</div>
+        <h1>Tu música y juegos merecen <em>sonar al máximo nivel.</em></h1>
+        <p>Monitores in-ear de estudio, módulos inalámbricos Bluetooth y accesorios originales KZ con garantía. Elige entre nuestro <strong>stock disponible hoy mismo en Cusco</strong> o explora nuestro <strong>catálogo completo</strong>.</p>
+        
+        <div class="hero-actions">
+          <button class="button primary" type="button" data-jump-tab="stock">
+            ⚡ Ver Stock Inmediato (20 unids) <span aria-hidden="true">→</span>
+          </button>
+          <button class="button subtle" type="button" data-jump-tab="catalog">
+            📖 Ver Catálogo Completo (21 modelos)
+          </button>
+        </div>
+
+        <div class="hero-facts">
+          <span><b>20</b> unidades en stock</span>
+          <span><b>7</b> modelos entrega inmediata</span>
+          <span><b>21</b> modelos en catálogo</span>
+          <span><b>Cusco</b> y todo el Perú</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-glow"></div>
+        <div class="visual-ring"></div>
+        <img src="images/kz_edx_pro.jpg" alt="Audífonos KZ EDX Pro disponibles en VayoTech Cusco" fetchpriority="high">
+        <div class="hero-sticker">
+          <span>BEST SELLER CUSCO</span>
+          <strong>KZ EDX Pro</strong>
+          <small>S/ 39.00 · 5 unidades en stock</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopping Process Steps -->
+    <section class="benefits wrap" aria-label="Cómo comprar en VayoTech">
+      <div>
+        <span class="benefit-icon">01</span>
+        <strong>1. Elige tu modelo</strong>
+        <small>Revisa fotos reales, características técnicas y precios oficiales.</small>
+      </div>
+      <div>
+        <span class="benefit-icon">02</span>
+        <strong>2. Arma tu pedido</strong>
+        <small>Añade los productos al carrito con stock garantizado en tiempo real.</small>
+      </div>
+      <div>
+        <span class="benefit-icon">03</span>
+        <strong>3. Entrega coordinada</strong>
+        <small>Coordinamos punto de entrega en Cusco o envío seguro por WhatsApp.</small>
+      </div>
+    </section>
+
+    <!-- Sale & Urgency Banner -->
+    <section class="sale wrap">
+      <div>
+        <span class="sale-label">DISPONIBILIDAD EN TIEMPO REAL · CUSCO</span>
+        <h2>Stock Físico Listo Para Entrega Inmediata</h2>
+        <p>Unidades registradas en nuestro inventario local en Cusco. Puedes solicitar entrega presencial hoy mismo o envío a cualquier provincia.</p>
+      </div>
+      <div class="sale-count">
+        <span>Tiempo restante de despacho hoy</span>
+        <strong id="countdown">--:--:--</strong>
+        <small>Atención continua personalizada por WhatsApp</small>
+      </div>
+    </section>
+
+    <!-- Store Section with Tabs -->
+    <section class="shop wrap" id="disponibles">
+      
+      <!-- Primary Tab Switcher -->
+      <div class="view-tabs-container">
+        <div class="view-tabs" role="tablist" aria-label="Pestañas de productos">
+          <button class="view-tab active" data-tab="stock" role="tab" aria-selected="true" id="tab-stock">
+            <span class="tab-icon">⚡</span>
+            <span class="tab-text">Stock Disponible Ahora</span>
+            <span class="tab-badge" id="tabStockBadge">20 unidades</span>
+          </button>
+          <button class="view-tab" data-tab="catalog" role="tab" aria-selected="false" id="tab-catalog">
+            <span class="tab-icon">📖</span>
+            <span class="tab-text">Catálogo Completo</span>
+            <span class="tab-badge" id="tabCatalogBadge">21 modelos</span>
+          </button>
+          <button class="view-tab" data-tab="all" role="tab" aria-selected="false" id="tab-all">
+            <span class="tab-icon">✨</span>
+            <span class="tab-text">Ver Todo</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Section Title (Dynamic according to active tab) -->
+      <div class="section-head">
+        <div>
+          <span class="kicker">EXPLORA NUESTRO STOCK Y CATÁLOGO</span>
+          <h2 id="shopSectionTitle">Stock Disponible para <em>Entrega Inmediata</em></h2>
+          <p id="shopSectionDesc">7 productos con stock físico en Cusco (20 unidades totales). Entrega hoy mismo en Cusco o envíos rápidos a todo el Perú.</p>
+        </div>
+      </div>
+
+      <!-- Filters & Tools Bar -->
+      <div class="shop-tools">
+        <label class="searchbox">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
+          <input id="search" type="search" placeholder="Buscar por modelo (ej. EDX Pro, Castor, Cable Silver, Estuche...)" aria-label="Buscar en stock o catálogo">
+        </label>
+
+        <div class="filters" aria-label="Filtrar por categoría">
+          <button class="filter active" data-filter="all" type="button">Todos</button>
+          <button class="filter" data-filter="audifonos" type="button">Audífonos In-Ear</button>
+          <button class="filter" data-filter="tws" type="button">Bluetooth TWS</button>
+          <button class="filter" data-filter="cables" type="button">Cables & Repuestos</button>
+          <button class="filter" data-filter="accesorios" type="button">Adaptadores & Estuches</button>
+        </div>
+
+        <label class="sort-label">
+          Ordenar:
+          <select id="sort" aria-label="Ordenar productos">
+            <option value="featured">Destacados / Stock</option>
+            <option value="low">Menor precio</option>
+            <option value="high">Mayor precio</option>
+            <option value="stock">Mayor disponibilidad</option>
+          </select>
+        </label>
+      </div>
+
+      <!-- Results Feedback -->
+      <p id="resultCount" class="results" aria-live="polite">Cargando productos...</p>
+
+      <!-- Dynamic Product Grid -->
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <!-- Delivery & Shipping Section -->
+    <section class="delivery wrap" id="entregas">
+      <div>
+        <span class="kicker">PROCESO TRANSPARENTE Y RÁPIDO</span>
+        <h2>Entregas en Cusco y Envíos a Todo el Perú</h2>
+        <p>En la ciudad de Cusco coordinamos la entrega personal o por delivery a tu domicilio / trabajo. Para envíos a nivel nacional trabajamos con Olva Courier y Shalom con número de seguimiento inmediato.</p>
+        <a class="button whatsapp" href="https://wa.me/51933685462?text=Hola%20VayoTech%2C%20quiero%20hacer%20una%20consulta%20sobre%20entregas%20y%20productos." target="_blank" rel="noopener">
+          Consultar por WhatsApp ↗
+        </a>
+      </div>
+
+      <div class="delivery-box">
+        <div>
+          <span>01</span>
+          <p>
+            <b>Cusco Capital & Alrededores</b>
+            <small>Entrega hoy mismo. Coordinamos punto céntrico o delivery express.</small>
+          </p>
+        </div>
+        <div>
+          <span>02</span>
+          <p>
+            <b>Provincias de Cusco & Todo el Perú</b>
+            <small>Envíos diarios por Shalom u Olva Courier con código de rastreo.</small>
+          </p>
+        </div>
+        <div>
+          <span>03</span>
+          <p>
+            <b>Garantía & Asesoría Personal</b>
+            <small>Te asesoramos a elegir el modelo que mejor se adapte a tus gustos musicales o juegos.</small>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <strong>VAYO<span>TECH</span> CUSCO</strong>
+        <p>Tu tienda especializada en audio Hi-Fi, monitores in-ear y accesorios KZ en Cusco, Perú.</p>
+      </div>
+      <p>Todos los precios están expresados en Soles peruanos (S/.). Stock en tiempo real sujeto a confirmación final por WhatsApp.</p>
+      <a href="https://wa.me/51933685462" target="_blank" rel="noopener">
+        WhatsApp Oficial: +51 933 685 462 ↗
+      </a>
+    </div>
+  </footer>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Carrito de compras" aria-modal="true" role="dialog" hidden>
+    <div class="drawer-head">
+      <div>
+        <span class="kicker">TU PEDIDO</span>
+        <h2>Mi Carrito (<span id="drawerCount">0</span>)</h2>
+      </div>
+      <button class="close" id="closeCart" type="button" aria-label="Cerrar carrito">×</button>
+    </div>
+
+    <div class="drawer-scroll">
+      <div id="cartItems"></div>
+
+      <div id="checkout" hidden>
+        <div class="total">
+          <span>Subtotal de productos:</span>
+          <strong id="subtotal">S/ 0.00</strong>
+        </div>
+        <p class="total-note">El delivery en Cusco (S/ 3 - 5) o envío nacional se confirma directamente al chatear.</p>
+
+        <h3>Datos para coordinar tu entrega</h3>
+        <form id="orderForm">
+          <label>
+            Tu nombre completo:
+            <input id="customer" name="customer" autocomplete="name" required placeholder="Ej. Juan Pérez">
+          </label>
+          <label>
+            Teléfono de contacto / WhatsApp:
+            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="Ej. 987 654 321">
+          </label>
+          <label>
+            Tipo de entrega:
+            <select id="delivery" name="delivery">
+              <option value="Entrega en Cusco (Punto Céntrico / Delivery)">Entrega en Cusco (Punto Céntrico / Delivery)</option>
+              <option value="Envío Nacional (Shalom / Olva)">Envío Nacional (Shalom / Olva)</option>
+            </select>
+          </label>
+          <label>
+            Dirección en Cusco o Ciudad / Agencia nacional:
+            <textarea id="destination" name="destination" required rows="2" placeholder="Ej. San Sebastián, Cusco / Arequipa - Agencia Shalom"></textarea>
+          </label>
+          <button class="button primary checkout-button" type="submit">
+            Continuar por WhatsApp <span aria-hidden="true">↗</span>
+          </button>
+          <p class="privacy-note">Se abrirá WhatsApp con el resumen de tu pedido armado y listo para enviar en un clic.</p>
+        </form>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Product Details Modal Backdrop -->
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-label="Detalle técnico de producto">
+      <button class="close modal-close" id="closeModal" type="button" aria-label="Cerrar detalle">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Floating Help Button -->
+  <a class="help" href="https://wa.me/51933685462?text=Hola%20VayoTech%20Cusco%2C%20necesito%20asesor%C3%ADa%20para%20elegir%20el%20mejor%20aud%C3%ADfono%20KZ." target="_blank" rel="noopener" aria-label="Hablar con VayoTech por WhatsApp">
+    <span>¿Necesitas asesoría?</span>
+    <b>WhatsApp Oficial ↗</b>
+  </a>
+
+</body>
+</html>
