@@ -41,7 +41,7 @@ function update(s,q){
  else if(/san francisco|real plaza|unsaac|san jeronimo|san sebastian|cusco centro|entrega local/.test(q)){next.location=q.includes('real plaza')?'Real Plaza':q.includes('unsaac')?'UNSAAC':'Punto local en Cusco';next.deliveryFee=3;}
  if(/\b(?:incluye|incluido|incluyendo|incluir|con)\b.*(?:envio|delivery)|total con/.test(q))next.totalBudget=true;
  if(/sin (?:envio|delivery)|solo (?:audifono|producto)/.test(q))next.totalBudget=false;
- const budget=parseBudget(q,s.step);if(budget.value!==undefined)next.budget=budget.value;
+ const budget=parseBudget(q,s.step||(!s.last.length?'budget':null));if(budget.value!==undefined)next.budget=budget.value;
  return {state:next,budget};
 }
 function offer(p,s,catalog){
@@ -84,6 +84,8 @@ function recommend(s,catalog,cheaper=false){
  }
  affordable.sort((a,b)=>cheaper?a.total-b.total:rank(b,s)-rank(a,s)||a.total-b.total);
  const chosen=affordable[0],low=[...affordable].filter(o=>o.product.id!==chosen.product.id).sort((a,b)=>a.total-b.total)[0];
+ chosen.choiceReason='Encaja en tu presupuesto'+(chosen.addon?' incluyendo el adaptador DAC':'')+'.'+(s.use==='gaming'&&chosen.micKnown?' La ficha lo orienta a gaming y menciona micrófono.':'');
+ if(low)low.choiceReason=low.total<chosen.total?'Ahorras '+money(chosen.total-low.total)+' frente a la recomendación principal.':'Otra referencia dentro de tu presupuesto.';
  s.last=[chosen,...(low?[low]:[])];
  return {kind:'recommendations',text:'Mi recomendación para '+({gaming:'gaming',music:'música',calls:'clases y llamadas',daily:'uso diario'}[s.use])+' con presupuesto de '+money(s.budget)+':',items:s.last,choices:['Una opción más barata','Cambiar presupuesto','Cambiar conector','Consultar con Ulianov'],note:s.totalBudget?'Abajo incluyo el costo de entrega.':'El precio incluye el DAC indicado. Envío aparte: recojo gratis, puntos locales S/ 3 o provincias S/ 12.'};
 }
@@ -121,7 +123,19 @@ function respond(previous,text,catalog){
    const items=found.slice(0,3).map(p=>offer(p,s,catalog)).filter(Boolean);
    if(!items.length)return result({kind:'message',text:'Ese modelo no coincide con la conexión elegida. Puedo revisar otra opción.',choices:['Cambiar conector','Consultar con Ulianov']});
    s.last=items;const compare=/compar|diferencia|\bvs\b|versus|cual.*mejor/.test(q)||items.length>1;
-   return result({kind:compare?'comparison':'products',text:compare?'Estas son las referencias del catálogo para comparar precio, conexión y descripción. No tengo mediciones independientes para prometer mayor rendimiento en tu equipo.':'Esta es la referencia publicada en el catálogo:',items,note:'Stock y compatibilidad se confirman antes de pagar.',choices:['Recomiéndame según mi presupuesto','Consultar con Ulianov']});
+   let explanation='Esta es la referencia publicada en el catálogo:';
+   if(compare){
+     const sorted=[...items].sort((a,b)=>a.total-b.total),micItem=items.find(o=>o.micKnown);
+     explanation='La opción más económica de estas referencias es '+sorted[0].product.name+' ('+money(sorted[0].total)+').';
+     if(micItem)explanation+=' Si necesitas micrófono, la ficha de '+micItem.product.name+' lo menciona.';
+     if(s.use){
+       const fit=items.filter(o=>s.budget===null||o.total+(s.totalBudget?(s.deliveryFee||0):0)<=s.budget);
+       const preferred=[...fit].sort((a,b)=>rank(b,s)-rank(a,s))[0];
+       if(preferred)explanation+=' Para tu uso, mi primera opción entre estas sería '+preferred.product.name+'.';
+       else explanation+=' Ninguna de estas opciones entra en el presupuesto indicado.';
+     }else explanation+=' Dime tu uso y presupuesto para elegir entre ellas.';
+   }
+   return result({kind:compare?'comparison':'products',text:explanation,items,note:'Referencia: descripción del catálogo. Stock y compatibilidad se confirman antes de pagar.',choices:['Recomiéndame según mi presupuesto','Consultar con Ulianov']});
  }
  const delivery=/entrega|delivery|envio|recojo|wanchaq|cuanto tarda/.test(q),shopping=/gaming|gamer|dota|musica|clases|presupuesto|soles|\bs\s*\//.test(q);
  if(delivery&&!shopping&&previous.step!=='location'){
