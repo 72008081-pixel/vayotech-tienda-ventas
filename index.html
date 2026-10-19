@@ -1,303 +1,1507 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#070b17">
-  <meta name="description" content="VayoTech Cusco: Tienda oficial de audífonos KZ, monitores in-ear, módulos Bluetooth TWS y repuestos con stock disponible en Cusco y envíos a todo el Perú.">
-  <title>VayoTech Cusco · Tienda de Audio KZ & Catálogo Oficial</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
-  <script src="app.js?v=5" defer></script>
-</head>
-<body>
+<!DOCTYPE html>
 
-  <!-- Top Announcement Bar -->
-  <aside class="topline">
-    <span>🎧 Audio KZ Oficial en Cusco</span>
-    <span>⚡ 20 unidades con entrega inmediata en Cusco</span>
-    <span>📦 Envíos rápidos y seguros a todo el Perú</span>
-  </aside>
-
-  <!-- Main Navigation Bar -->
-  <header class="header">
-    <nav class="nav wrap" aria-label="Navegación principal">
-      <a class="logo" href="#inicio" aria-label="VayoTech, volver al inicio">
-        <span class="logo-mark">V<span class="logo-dot"></span></span>
-        <span>VAYO<span class="logo-accent">TECH</span><small>CUSCO · AUDIO & TECH</small></span>
-      </a>
-
-      <div class="navlinks">
-        <a href="#disponibles" data-jump-tab="stock">⚡ En stock (20)</a>
-        <a href="#disponibles" data-jump-tab="catalog">📖 Catálogo (21)</a>
-        <a href="#entregas">🚚 Entregas</a>
-      </div>
-
-      <button class="cart-trigger" id="openCart" type="button" aria-label="Abrir mi carrito">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 4h2l2.3 11h11.2l2-8H6M9 20h.01M18 20h.01"/>
-        </svg>
-        <span>Mi carrito</span>
-        <b id="cartCount">0</b>
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>VayoTech Cusco - Hi-Fi &amp; Liquidación KZ 2026</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&amp;family=Outfit:wght@400;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html{scroll-behavior:smooth;}html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}@keyframes marquee{0%{transform:translateX(0%);}100%{transform:translateX(-50%);}}.animate-marquee{display:flex;width:200%;animation:marquee 30s linear infinite;}.animate-marquee:hover{animation-play-state:paused;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-card": "#0A0F1E",
+          "outline": "#ab897d",
+          "primary-fixed-dim": "#ffb599",
+          "surface-container": "#1b1f2b",
+          "whatsapp-green": "#25D366",
+          "tertiary": "#00ddd6",
+          "primary": "#ffb599",
+          "on-secondary-fixed-variant": "#6600b7",
+          "error-container": "#93000a",
+          "secondary-fixed": "#efdbff",
+          "tertiary-fixed": "#47faf3",
+          "inverse-surface": "#dfe2f1",
+          "surface-variant": "#313440",
+          "surface-tint": "#ffb599",
+          "surface-dim": "#0f131e",
+          "on-tertiary-fixed-variant": "#00504d",
+          "on-primary-fixed-variant": "#7f2b00",
+          "text-muted": "#94A3B8",
+          "on-error-container": "#ffdad6",
+          "on-tertiary-container": "#003331",
+          "error": "#ffb4ab",
+          "on-tertiary-fixed": "#00201f",
+          "on-secondary-fixed": "#2b0052",
+          "tertiary-container": "#00a5a0",
+          "on-secondary-container": "#d0a6ff",
+          "tertiary-fixed-dim": "#00ddd6",
+          "amber-warning": "#F59E0B",
+          "on-error": "#690005",
+          "inverse-primary": "#a63b00",
+          "outline-variant": "#5b4137",
+          "primary-container": "#ff5e00",
+          "on-background": "#dfe2f1",
+          "surface-container-high": "#262a35",
+          "on-primary": "#5a1c00",
+          "on-primary-fixed": "#370e00",
+          "secondary-fixed-dim": "#dbb8ff",
+          "primary-fixed": "#ffdbce",
+          "surface-bright": "#353945",
+          "surface": "#0f131e",
+          "on-surface-variant": "#e4bfb1",
+          "secondary": "#dbb8ff",
+          "text-primary": "#F1F5F9",
+          "on-tertiary": "#003735",
+          "inverse-on-surface": "#2c303c",
+          "on-primary-container": "#531900",
+          "surface-container-low": "#171b26",
+          "deal-emerald": "#10B981",
+          "surface-container-lowest": "#0a0e18",
+          "on-surface": "#dfe2f1",
+          "secondary-container": "#6807ba",
+          "surface-container-highest": "#313440",
+          "on-secondary": "#470083",
+          "background": "#0f131e",
+          "surface-border": "#1E293B"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-md": "1rem",
+          "margin-desktop": "2.5rem",
+          "space-lg": "1.5rem",
+          "gutter-desktop": "1.5rem",
+          "margin": "1rem",
+          "gutter": "1rem",
+          "space-xl": "2.5rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem"
+        },
+        "fontFamily": {
+          "price-cents": ["Space Grotesk"],
+          "price-integer": ["Space Grotesk"],
+          "headline-lg-mobile": ["Space Grotesk"],
+          "headline-md": ["Space Grotesk"],
+          "label-badge": ["JetBrains Mono"],
+          "price-currency": ["Space Grotesk"],
+          "display-hero-mobile": ["Space Grotesk"],
+          "body-lg": ["Outfit"],
+          "headline-lg": ["Space Grotesk"],
+          "body-sm": ["Outfit"],
+          "display-hero": ["Space Grotesk"],
+          "body-md": ["Outfit"]
+        },
+        "fontSize": {
+          "price-cents": ["14px", {"lineHeight": "18px", "fontWeight": "700"}],
+          "price-integer": ["26px", {"lineHeight": "28px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+          "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+          "label-badge": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700"}],
+          "price-currency": ["14px", {"lineHeight": "18px", "fontWeight": "700"}],
+          "display-hero-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+          "display-hero": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+          "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+        }
+      }
+    }
+  }</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary min-h-screen relative overflow-x-hidden"><div class="fixed inset-0 pointer-events-none z-0 bg-[radial-gradient(circle_at_15%_20%,rgba(104,7,186,0.18),transparent_45%),radial-gradient(circle_at_85%_75%,rgba(0,221,214,0.12),transparent_40%),radial-gradient(circle_at_50%_0%,rgba(255,94,0,0.08),transparent_50%)]"></div><div class="fixed top-0 left-0 w-full z-50"><div class="h-8 bg-surface-container-lowest/90 backdrop-blur-md overflow-hidden flex items-center relative"><div class="animate-marquee flex items-center gap-space-lg text-body-sm font-label-badge text-text-muted whitespace-nowrap"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-deal-emerald animate-ping"></span><span class="text-deal-emerald font-bold">CUSCO EN VIVO:</span><span>Rodrigo M. acaba de comprar KZ ZSN PRO X en San Jerónimo</span></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="text-primary font-bold">STOCK FÍSICO:</span><span>Quedan 4 unidades KZ Castor (Harman Target) en almacén Wanchaq</span></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="text-tertiary font-bold">DESPACHO EXPRESS:</span><span>Entregas hoy mismo en Plaza San Francisco y Real Plaza</span></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-deal-emerald animate-ping"></span><span class="text-deal-emerald font-bold">CUSCO EN VIVO:</span><span>Rodrigo M. acaba de comprar KZ ZSN PRO X en San Jerónimo</span></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container"></span><span class="text-primary font-bold">STOCK FÍSICO:</span><span>Quedan 4 unidades KZ Castor (Harman Target) en almacén Wanchaq</span></div><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="text-tertiary font-bold">DESPACHO EXPRESS:</span><span>Entregas hoy mismo en Plaza San Francisco y Real Plaza</span></div></div></div><header class="h-20 bg-surface-card/85 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.36)]"><div class="max-w-7xl mx-auto h-full px-space-md lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><div class="relative flex items-center justify-center p-space-xs bg-surface-container-high rounded-full shadow-[0_0_15px_rgba(0,221,214,0.3)]"><img alt="VayoTech Koala Gamer Logo" class="w-8 h-8 rounded-full object-cover" src="images/vayotech_koala_logo.png" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida/AEtjO1WSNxLxG7A1g0pnXGnW7dl7VKwtziYEGiYmgowkviN-4rYL0Lawr0B6Kwf0KH8pLqd3i3mLG_7yt1ClcSicJg2kHASPD6I1b1f4ulPMqMeLSXM_iFQ0lorx_J4-X8wxT8PktFYrFH5LJXFnIEg6kiGc5MfY7gj0FL91NCAF1G633eLlY6DkaCP56Tk0tdn58X3Y_zKdYbjv8sCnL_pHpmJcMB5jtQyC-A2WGdhTkoMa2oVEhUAK_G8NTk__cmO9r5gJXP57nJg5EbE';"/><span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-deal-emerald rounded-full"></span></div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight font-bold text-on-surface">VAYOTECH</span><span class="font-headline-md text-headline-md font-bold text-primary-container">CUSCO</span></div><div class="flex items-center gap-space-xs"><span class="font-label-badge text-label-badge px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-bold tracking-wider">ALMACÉN CUSCO</span><span class="text-outline-variant font-label-badge text-label-badge">•</span><span class="font-label-badge text-label-badge text-deal-emerald font-bold">STOCK REAL 2026</span></div></div></div><nav class="hidden xl:flex items-center gap-space-xs"><a class="px-space-md py-space-xs font-body-md text-body-md rounded-lg text-primary hover:bg-surface-container-high transition-all font-semibold" href="#lote-maestro">Ofertas Flash</a><a class="px-space-md py-space-xs font-body-md text-body-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#catalogo">Catálogo KZ</a><a class="px-space-md py-space-xs font-body-md text-body-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#guia-koala">Guía Koala Hi-Fi</a><a class="px-space-md py-space-xs font-body-md text-body-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#logistica">Logística Cusco</a><a class="px-space-md py-space-xs font-body-md text-body-md rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" href="#resenas">Reseñas</a></nav><div class="flex items-center gap-space-sm"><button id="header-cart-btn" onclick="toggleCartDrawer(true)" class="relative flex items-center gap-space-sm px-space-md py-space-xs rounded-xl bg-surface-container-high hover:bg-surface-bright text-on-surface transition-all shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] cursor-pointer active:scale-95" type="button"><div class="relative"><span class="material-symbols-outlined text-tertiary">shopping_bag</span><span id="header-cart-badge" class="absolute -top-1 -right-2 bg-primary-container text-on-primary font-label-badge text-label-badge px-1 rounded-full">3</span></div><div class="hidden sm:flex flex-col text-left"><span class="text-body-sm text-text-muted leading-none">Mi Carrito</span><span id="header-cart-total" class="font-price-integer text-body-md font-bold text-primary">S/. 179.00</span></div></button><a class="flex items-center gap-space-xs px-space-md py-space-xs rounded-xl bg-whatsapp-green hover:bg-whatsapp-green/90 text-on-surface font-bold text-body-sm shadow-[0_0_16px_rgba(37,211,102,0.35)] transition-all transform active:scale-95" href="https://wa.me/51933685462" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-body-lg text-on-surface">chat</span><div class="hidden md:flex flex-col text-left"><span class="text-body-sm leading-tight text-on-surface font-bold">WhatsApp KZ</span><span class="font-label-badge text-label-badge opacity-90 text-on-surface">+51 933 685 462</span></div></a></div></div></header></div><main class="relative z-10 w-full pt-28 bg-transparent min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Notification Floating Bar -->
+<div class="w-full bg-surface-container-lowest/80 backdrop-blur-md px-space-md py-space-xs text-body-sm flex items-center justify-between shadow-sm">
+<div class="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-space-xs text-text-muted">
+<div class="flex items-center gap-space-sm" id="live-order-badge">
+<span class="inline-flex items-center px-space-xs py-0.5 rounded-full bg-deal-emerald/20 text-deal-emerald font-label-badge text-label-badge font-bold animate-pulse">
+<span class="w-1.5 h-1.5 rounded-full bg-deal-emerald mr-1.5"></span>EN VIVO
+        </span>
+<span class="font-body-md text-on-surface" id="live-order-text">⚡ Piero en San Jerónimo acaba de reservar 1x KZ Castor Pro</span>
+</div>
+<div class="flex items-center gap-space-md text-body-sm font-label-badge text-primary-fixed-dim">
+<span>📍 Almacén Wanchaq Abierto</span>
+<span class="hidden md:inline">•</span>
+<span class="hidden md:inline text-deal-emerald">Despachos hoy en Cusco S/. 3.00</span>
+</div>
+</div>
+</div>
+<!-- Hero Section with Glass Countdown -->
+<section class="relative w-full overflow-hidden px-space-md lg:px-margin-desktop py-space-lg lg:py-space-xl">
+<!-- Atmospheric Ambient Glows -->
+<div class="absolute -top-32 left-1/4 w-96 h-96 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 right-10 w-96 h-96 rounded-full bg-tertiary-container/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center relative z-10">
+<div class="lg:col-span-7 space-y-space-md text-left">
+<!-- Holographic Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-surface-container-high/90 backdrop-blur-md shadow-[0_0_20px_rgba(255,94,0,0.25)]">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-badge text-label-badge tracking-wider font-bold text-primary-fixed">LIQUIDACIÓN TOTAL MAYORISTA 2026 • CUSCO</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface font-extrabold tracking-tight leading-tight">
+          Precios de Fábrica en <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container via-primary-fixed-dim to-tertiary">Audio Hi-Fi KZ</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-muted max-w-2xl">
+          Stock físico sellado en almacén Cusco. Monitores in-ear certificados para gaming competitivo, músicos y audiófilos. Accede a precios especiales desde 1 unidad o descuentos mayoristas para revendedores de la región.
+        </p>
+<!-- Glass Countdown Timer -->
+<div class="p-space-md rounded-xl bg-surface-card/70 backdrop-blur-xl shadow-xl flex flex-col sm:flex-row items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-amber-warning text-headline-md animate-pulse">timer</span>
+<div>
+<div class="font-label-badge text-label-badge text-text-muted font-bold">CIERRE DE LIQUIDACIÓN</div>
+<div class="text-on-surface font-headline-md font-bold text-body-lg">Últimas 48 horas</div>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-space-xs w-full sm:w-auto">
+<div class="flex flex-col items-center justify-center bg-surface-container px-space-sm py-space-xs rounded-lg min-w-[60px]">
+<span class="font-price-integer text-headline-md text-primary font-bold" id="timer-days">01</span>
+<span class="font-label-badge text-body-sm text-text-muted">DÍAS</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-surface-container px-space-sm py-space-xs rounded-lg min-w-[60px]">
+<span class="font-price-integer text-headline-md text-primary font-bold" id="timer-hours">18</span>
+<span class="font-label-badge text-body-sm text-text-muted">HRS</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-surface-container px-space-sm py-space-xs rounded-lg min-w-[60px]">
+<span class="font-price-integer text-headline-md text-primary font-bold" id="timer-minutes">42</span>
+<span class="font-label-badge text-body-sm text-text-muted">MIN</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-surface-container px-space-sm py-space-xs rounded-lg min-w-[60px]">
+<span class="font-price-integer text-headline-md text-tertiary font-bold" id="timer-seconds">59</span>
+<span class="font-label-badge text-body-sm text-text-muted">SEG</span>
+</div>
+</div>
+</div>
+<!-- Hero CTAs -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="flex items-center gap-space-xs px-space-lg py-3.5 rounded-xl bg-gradient-to-r from-primary-container to-inverse-primary text-on-surface font-headline-md text-body-md font-bold shadow-[0_4px_24px_rgba(255,94,0,0.4)] hover:brightness-110 active:scale-95 transition-all" href="#catalogo">
+<span class="material-symbols-outlined text-body-lg">headphones</span>
+<span>Ver Catálogo y Stock</span>
+</a>
+<button class="flex items-center gap-space-xs px-space-lg py-3.5 rounded-xl bg-surface-container-high hover:bg-surface-bright text-tertiary font-headline-md text-body-md font-bold transition-all shadow-md" onclick="addLotToCart()">
+<span class="material-symbols-outlined text-body-lg">inventory_2</span>
+<span>Apartar Lote Completo S/. 849</span>
+</button>
+</div>
+<!-- Glass Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs p-space-xs bg-surface-container/40 backdrop-blur rounded-lg">
+<span class="material-symbols-outlined text-deal-emerald text-body-lg">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">100% Originales Sellados</span>
+</div>
+<div class="flex items-center gap-space-xs p-space-xs bg-surface-container/40 backdrop-blur rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-body-lg">local_shipping</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Cusco Entrega S/. 3.00</span>
+</div>
+<div class="flex items-center gap-space-xs p-space-xs bg-surface-container/40 backdrop-blur rounded-lg">
+<span class="material-symbols-outlined text-primary-fixed-dim text-body-lg">payments</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Contraentrega Yape/Plin</span>
+</div>
+</div>
+</div>
+<!-- Hero Visual Representation with Koala Gamer Logo -->
+<div class="lg:col-span-5 flex justify-center relative">
+<div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-secondary-container/40 via-surface-card to-tertiary-container/30 p-2 shadow-[0_0_60px_rgba(104,7,186,0.35)] flex items-center justify-center">
+<div class="w-full h-full rounded-full bg-surface-card/90 backdrop-blur-2xl p-space-md flex flex-col items-center justify-center text-center overflow-hidden relative">
+<img alt="VayoTech Koala Gamer Hi-Fi Cusco" class="w-64 h-64 sm:w-80 sm:h-80 object-contain drop-shadow-[0_0_25px_rgba(0,221,214,0.3)] hover:scale-105 transition-transform duration-500" src="images/vayotech_koala_logo.png" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuBUD5KsYIB44WiuJn8qqC2fwlp2vK5IFNCNMfXgrX4-ubrmOXnRG1GiAsdWOUsBZTwWJ0WRI9gP07wkh0L-JK0Hf1rlDUqHCKF2xl3OIJZwp_W6sV1QDbje24iTil9Kwt4swtw-DSP3TdLX3agIZJmHqj96vdrSf_G36JEwVaLT5PH4IZY7hR3sVCqjUlCw-HdATpzgDxrs3r18OcAvS4GgkM-FhVFqdjS9QysP8alFxE1xVjytDOQBAEgtB2qhdxI4apY';"/>
+<div class="absolute bottom-4 bg-surface-container-high/90 px-space-md py-1 rounded-full backdrop-blur-md shadow-lg">
+<span class="font-label-badge text-label-badge text-tertiary font-bold">IMPORTADOR AUTORIZADO 2026</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Wholesale Master Lot Banner Section -->
+<section class="w-full px-space-md lg:px-margin-desktop py-space-md" id="lote-maestro">
+<div class="max-w-7xl mx-auto rounded-2xl bg-gradient-to-r from-surface-card via-surface-container to-surface-card p-space-md lg:p-space-lg shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-80 h-80 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-space-lg">
+<div class="space-y-space-xs max-w-2xl">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded bg-primary-container text-on-primary-container font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-body-sm">local_fire_department</span>
+<span>LIQUIDACIÓN DE ALMACÉN CENTRAL • LOTE MAESTRO</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+            Lote Completo de 34 Productos Hi-Fi: <span class="text-primary-container">S/. 849.00</span>
+</h2>
+<p class="font-body-md text-body-md text-text-muted">
+            Adquiere todo el stock remanente para distribución en Cusco y provincias. Incluye 13 modelos estelares: KZ Castor Harman, Castor Pro, EDX Pro X, EDX Lite, Gale Metal, DQS, Pisces Type-C, Vader Flagship, ZSN Pro 2, módulos TWS AZ09 y repuestos plateados.
+          </p>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<div class="flex flex-col">
+<span class="text-body-sm text-text-muted">Precio Unitario Real</span>
+<span class="font-price-integer text-body-lg text-text-muted line-through">S/. 1,257.00</span>
+</div>
+<div class="flex flex-col">
+<span class="text-body-sm text-deal-emerald font-bold">Tu Ahorro Inmediato</span>
+<span class="font-price-integer text-headline-md text-deal-emerald font-bold">S/. 408.00 (32%)</span>
+</div>
+<div class="flex flex-col">
+<span class="text-body-sm text-tertiary">Margen Revendedor</span>
+<span class="font-label-badge text-body-md font-bold text-tertiary">Hasta 65% de ganancia</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col gap-space-sm w-full lg:w-auto min-w-[280px]">
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-xl bg-primary-container hover:bg-primary-container/90 text-on-primary font-headline-md text-body-md font-bold shadow-[0_0_20px_rgba(255,94,0,0.4)] active:scale-95 transition-all" onclick="addLotToCart()">
+<span class="material-symbols-outlined text-body-lg">shopping_cart_checkout</span>
+<span>Añadir Lote al Carrito</span>
+</button>
+<a class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-xl bg-whatsapp-green text-on-surface font-headline-md text-body-md font-bold shadow-md hover:brightness-105 active:scale-95 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20deseo%20separar%20el%20Lote%20Completo%20de%2034%20productos%20por%20S/.849%20en%20Cusco" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-body-lg">chat</span>
+<span>Separar Lote x WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Packs for Resellers & Enthusiasts -->
+<section class="w-full px-space-md lg:px-margin-desktop py-space-lg">
+<div class="max-w-7xl mx-auto space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-badge text-label-badge text-secondary font-bold tracking-wider">OPORTUNIDAD MAYORISTA</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Packs Estratégicos con Margen Alto</h2>
+</div>
+<p class="font-body-md text-text-muted text-body-sm max-w-md">Combina modelos para gaming y audiófilos con precios directos de liquidación en almacén Cusco.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Pack 1 -->
+<div class="rounded-xl bg-surface-card/80 backdrop-blur-xl p-space-md shadow-lg flex flex-col justify-between hover:shadow-2xl transition-all">
+<div class="space-y-space-sm">
+<div class="flex justify-between items-start">
+<span class="px-space-xs py-1 rounded bg-secondary-container text-secondary-fixed font-label-badge text-label-badge font-bold">PACK REVENDEDOR GAMER</span>
+<span class="text-deal-emerald font-label-badge text-body-sm font-bold">12 UNIDADES</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Combo Esports &amp; Streaming</h3>
+<p class="font-body-sm text-text-muted text-body-sm">Selección de alta rotación para Dota 2, CS2 y Warzone. Incluye 5x EDX Pro, 4x EDX Lite, 1x EDX Pro X y 2x adaptadores Type-C DAC.</p>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-deal-emerald text-body-sm">check_circle</span>Micrófono HD integrado en todos</li>
+<li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-deal-emerald text-body-sm">check_circle</span>Fácil venta en universidades y cabinas</li>
+</ul>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<div>
+<span class="text-body-sm text-text-muted block line-through">S/. 340.00</span>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 249.00</span>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addBundleToCart('Pack Revendedor Gamer (12 uds)', 249)">
+              Agregar Pack
+            </button>
+</div>
+</div>
+<!-- Pack 2 -->
+<div class="rounded-xl bg-surface-card/80 backdrop-blur-xl p-space-md shadow-lg flex flex-col justify-between hover:shadow-2xl transition-all relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary-container px-3 py-1 font-label-badge text-label-badge text-on-primary font-bold rounded-bl-lg">TOP RECOMENDADO</div>
+<div class="space-y-space-sm">
+<div class="flex justify-between items-start">
+<span class="px-space-xs py-1 rounded bg-surface-container text-tertiary font-label-badge text-label-badge font-bold">PACK AUDIÓFILO PRO</span>
+<span class="text-primary font-label-badge text-body-sm font-bold">4 UNIDADES ÉLITE</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Experiencia Hi-Res Completa</h3>
+<p class="font-body-sm text-text-muted text-body-sm">Para músicos de iglesia, monitoreo en vivo y productores de estudio en Cusco. 1x KZ Castor Harman, 1x Castor Pro 2026, 1x Módulo Bluetooth AZ09 TWS y 1x Cable Plateado 8 núcleos.</p>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-deal-emerald text-body-sm">check_circle</span>Switches de ecualización física</li>
+<li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-deal-emerald text-body-sm">check_circle</span>Convierte a inalámbrico con AZ09</li>
+</ul>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<div>
+<span class="text-body-sm text-text-muted block line-through">S/. 275.00</span>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 207.00</span>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-primary-container hover:bg-primary-container/90 text-on-primary font-bold text-body-sm transition-all shadow-sm" onclick="addBundleToCart('Pack Audiófilo Pro (4 uds)', 207)">
+              Agregar Pack
+            </button>
+</div>
+</div>
+<!-- Pack 3 -->
+<div class="rounded-xl bg-surface-card/80 backdrop-blur-xl p-space-md shadow-lg flex flex-col justify-between hover:shadow-2xl transition-all">
+<div class="space-y-space-sm">
+<div class="flex justify-between items-start">
+<span class="px-space-xs py-1 rounded bg-surface-container text-deal-emerald font-label-badge text-label-badge font-bold">ACCESORIOS &amp; PROTECCIÓN</span>
+<span class="text-deal-emerald font-label-badge text-body-sm font-bold">14 PIEZAS</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Pack Mantenimiento Hi-Fi</h3>
+<p class="font-body-sm text-text-muted text-body-sm">El kit de soporte indispensable para mantener tus monitores como nuevos: adaptadores DAC Type-C, cables de repuesto reforzados y estuches rígidos antigolpes EVA.</p>
+<ul class="space-y-1 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-deal-emerald text-body-sm">check_circle</span>Compatibles con Xiaomi, iPhone y Samsung</li>
+<li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-deal-emerald text-body-sm">check_circle</span>Estuches con bolsillo de malla</li>
+</ul>
+</div>
+<div class="pt-space-md flex items-center justify-between">
+<div>
+<span class="text-body-sm text-text-muted block line-through">S/. 190.00</span>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 136.00</span>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addBundleToCart('Pack Accesorios &amp; Protección (14 pcs)', 136)">
+              Agregar Pack
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Koala Audio Guide Section -->
+<section class="w-full px-space-md lg:px-margin-desktop py-space-lg" id="guia-koala">
+<div class="max-w-7xl mx-auto rounded-2xl bg-surface-card/90 backdrop-blur-2xl p-space-md lg:p-space-lg shadow-xl">
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md pb-space-md">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary">tune</span>
+<span class="font-label-badge text-label-badge text-tertiary font-bold">ASESOR VIRTUAL KOALA HI-FI</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">¿Qué perfil acústico necesitas en Cusco?</h2>
+<p class="font-body-md text-body-md text-text-muted">Alterna según el uso que le darás para ver la recomendación técnica de drivers.</p>
+</div>
+<div class="flex items-center bg-surface-container p-1 rounded-xl shadow-inner">
+<button class="px-space-md py-2 rounded-lg font-headline-md text-body-sm font-bold bg-primary-container text-on-primary-container transition-all" id="btn-mode-gamer" onclick="setAcousticMode('gamer')">
+            🎮 Modo Gamer / Bajos &amp; Pasos
+          </button>
+<button class="px-space-md py-2 rounded-lg font-headline-md text-body-sm font-bold text-text-muted hover:text-on-surface transition-all" id="btn-mode-audiophile" onclick="setAcousticMode('audiophile')">
+            🎻 Modo Audiófilo / Voces &amp; Detalle
+          </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs" id="acoustic-content">
+<div class="p-space-md rounded-xl bg-surface-container-low/70 space-y-space-xs">
+<span class="font-label-badge text-label-badge text-primary font-bold">CONFIGURACIÓN DE DRIVERS</span>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold" id="guide-driver-title">Driver Dinámico Magnético Dual (DD)</h4>
+<p class="font-body-sm text-body-sm text-text-muted" id="guide-driver-desc">Diseñado para impactos de frecuencias bajas, explosiones realistas y posicionamiento espacial preciso de pasos en shooters como Valorant y Call of Duty.</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low/70 space-y-space-xs">
+<span class="font-label-badge text-label-badge text-tertiary font-bold">MODELOS RECOMENDADOS</span>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold" id="guide-models-title">KZ EDX Pro, EDX Lite &amp; Castor Bass</h4>
+<p class="font-body-sm text-body-sm text-text-muted" id="guide-models-desc">Precios desde S/. 30.00 hasta S/. 65.00 con excelente aislamiento pasivo de hasta 26dB para salas ruidosas o transporte en Cusco.</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low/70 flex flex-col justify-between">
+<div>
+<span class="font-label-badge text-label-badge text-deal-emerald font-bold">FILTRAR EN TIENDA</span>
+<h4 class="font-headline-md text-body-lg text-on-surface font-bold">Ver modelos para este perfil</h4>
+<p class="font-body-sm text-body-sm text-text-muted">Haz clic para auto-filtrar el catálogo según este resultado.</p>
+</div>
+<button class="mt-space-sm px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-bold text-body-sm transition-all flex items-center justify-center gap-space-xs" id="guide-action-btn" onclick="filterFromGuide('gamer')">
+<span>Mostrar Modelos Gamer</span>
+<span class="material-symbols-outlined text-body-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Catalog Grid Section -->
+<section class="w-full px-space-md lg:px-margin-desktop py-space-xl" id="catalogo">
+<div class="max-w-7xl mx-auto space-y-space-lg">
+<!-- Search & Filters Toolbar -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-card/80 backdrop-blur-xl p-space-md rounded-2xl shadow-xl">
+<div class="w-full md:w-80 relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-text-muted text-body-lg">search</span>
+<input class="w-full pl-10 pr-space-md py-2 rounded-xl bg-surface-container text-on-surface placeholder:text-text-muted font-body-sm focus:outline-none focus:ring-1 focus:ring-tertiary" id="catalog-search" oninput="handleSearch(this.value)" placeholder="Buscar por modelo KZ (ej. Castor, ZSN)..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
+<button class="catalog-filter-btn px-space-md py-1.5 rounded-lg font-headline-md text-body-sm font-bold bg-primary-container text-on-primary-container whitespace-nowrap shadow-sm" onclick="filterCategory('all', this)">
+            Todos (10)
+          </button>
+<button class="catalog-filter-btn px-space-md py-1.5 rounded-lg font-headline-md text-body-sm font-bold bg-surface-container text-text-muted hover:text-on-surface whitespace-nowrap transition-all" onclick="filterCategory('gamer', this)">
+            Gamer (&lt; S/. 40)
+          </button>
+<button class="catalog-filter-btn px-space-md py-1.5 rounded-lg font-headline-md text-body-sm font-bold bg-surface-container text-text-muted hover:text-on-surface whitespace-nowrap transition-all" onclick="filterCategory('mid', this)">
+            Hi-Fi &amp; Switches (S/. 50 - S/. 70)
+          </button>
+<button class="catalog-filter-btn px-space-md py-1.5 rounded-lg font-headline-md text-body-sm font-bold bg-surface-container text-text-muted hover:text-on-surface whitespace-nowrap transition-all" onclick="filterCategory('flagship', this)">
+            Flagship &amp; Híbridos (S/. 75+)
+          </button>
+</div>
+</div>
+<!-- Responsive Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-space-md" id="product-grid">
+<!-- 1. KZ EDX Lite -->
+<div class="product-card group rounded-2xl bg-surface-card/85 backdrop-blur-xl p-space-sm shadow-lg flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(0,221,214,0.12)] transition-all duration-300" data-category="gamer" data-name="KZ EDX Lite" data-price="30">
+<div>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="KZ EDX Lite VayoTech Cusco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" id="img-edx-lite" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6IW-LkC9mdeGgNzTSFwTarssoOMGjOKKk0flPQaWGjWdlciDVrTVD56z2sVwXIOoUMehWPt5_iZhlndnjUyFQkmTHszBswGMj9RJvcpsZ4g9pf6zpiIcS4Y3x7DlnIWsHz1-8ZWzGGTQ8UdK3QjCMngcR4mHKJSpuii8QpfkAKQ00_SRXy-sLQp_yeIAC7EiYVfsQfT0M5aZagzvkgOKVTgSdlhJp_M1O_pzYORPvdtWiEbv0utwDAk-p2pPu0NcLTYg"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-badge text-label-badge font-bold">SUPER PRECIO</span>
+<span class="px-space-xs py-0.5 rounded bg-deal-emerald/90 text-on-surface font-label-badge text-label-badge font-bold">STOCK: 4 UDS</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 rounded-full bg-surface-card/80 backdrop-blur text-on-surface hover:text-tertiary transition-colors shadow" onclick="openModal('KZ EDX Lite', ['https://lh3.googleusercontent.com/aida-public/AB6AXuB6IW-LkC9mdeGgNzTSFwTarssoOMGjOKKk0flPQaWGjWdlciDVrTVD56z2sVwXIOoUMehWPt5_iZhlndnjUyFQkmTHszBswGMj9RJvcpsZ4g9pf6zpiIcS4Y3x7DlnIWsHz1-8ZWzGGTQ8UdK3QjCMngcR4mHKJSpuii8QpfkAKQ00_SRXy-sLQp_yeIAC7EiYVfsQfT0M5aZagzvkgOKVTgSdlhJp_M1O_pzYORPvdtWiEbv0utwDAk-p2pPu0NcLTYg', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBLXqGw9Hg021-k_xng-teOAY2FIqOEDpwrHsboI6MVwreM06AyhD3igVS2boVQvcXqgtFnedAugCB_8IdYJC3GGxpA_3jvkvU5J-expnO37_GYFZsbLMz8enatipJEMGR2z8wZbROTF_x-5Ri8URQ3aVxoYk6M4Xt9S91ZwOtEfmSTNqxSm5VKbgn3FwMI-0kLhYNzskWU1O8F-YHmQBM9DPqSwO3N8_YU9gKXexIbnUEgPEfMTMwmX-VmYPe3F0DjoWU'], 'S/. 30.00', 'Driver Dinámico Super Linear de 10mm. Ideal para gaming en celular, clases virtuales y uso diario ultraligero.')">
+<span class="material-symbols-outlined text-body-md">zoom_in</span>
+</button>
+</div>
+<div class="pt-space-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-body-sm text-tertiary">1DD Super Linear</span>
+<span class="text-text-muted text-body-sm line-through">S/. 45.00</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">KZ EDX Lite</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">Cable desmontable OFC de alta pureza y micrófono HD con cancelación pasiva.</p>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 30.00</span>
+<span class="font-body-sm text-deal-emerald font-semibold block text-body-sm">Entrega hoy S/. 3</span>
+</div>
+<!-- Color/Frame switcher -->
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-lg">
+<button class="w-4 h-4 rounded-full bg-deal-emerald hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-edx-lite', 'https://lh3.googleusercontent.com/aida-public/AB6AXuB6IW-LkC9mdeGgNzTSFwTarssoOMGjOKKk0flPQaWGjWdlciDVrTVD56z2sVwXIOoUMehWPt5_iZhlndnjUyFQkmTHszBswGMj9RJvcpsZ4g9pf6zpiIcS4Y3x7DlnIWsHz1-8ZWzGGTQ8UdK3QjCMngcR4mHKJSpuii8QpfkAKQ00_SRXy-sLQp_yeIAC7EiYVfsQfT0M5aZagzvkgOKVTgSdlhJp_M1O_pzYORPvdtWiEbv0utwDAk-p2pPu0NcLTYg')" title="Versión Verde"></button>
+<button class="w-4 h-4 rounded-full bg-secondary hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-edx-lite', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBLXqGw9Hg021-k_xng-teOAY2FIqOEDpwrHsboI6MVwreM06AyhD3igVS2boVQvcXqgtFnedAugCB_8IdYJC3GGxpA_3jvkvU5J-expnO37_GYFZsbLMz8enatipJEMGR2z8wZbROTF_x-5Ri8URQ3aVxoYk6M4Xt9S91ZwOtEfmSTNqxSm5VKbgn3FwMI-0kLhYNzskWU1O8F-YHmQBM9DPqSwO3N8_YU9gKXexIbnUEgPEfMTMwmX-VmYPe3F0DjoWU')" title="Versión Lila/Negro"></button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addToCart('KZ EDX Lite', 30, 'https://lh3.googleusercontent.com/aida-public/AB6AXuB6IW-LkC9mdeGgNzTSFwTarssoOMGjOKKk0flPQaWGjWdlciDVrTVD56z2sVwXIOoUMehWPt5_iZhlndnjUyFQkmTHszBswGMj9RJvcpsZ4g9pf6zpiIcS4Y3x7DlnIWsHz1-8ZWzGGTQ8UdK3QjCMngcR4mHKJSpuii8QpfkAKQ00_SRXy-sLQp_yeIAC7EiYVfsQfT0M5aZagzvkgOKVTgSdlhJp_M1O_pzYORPvdtWiEbv0utwDAk-p2pPu0NcLTYg')">
+                + Carrito
+              </button>
+<a class="w-full py-2 rounded-lg bg-whatsapp-green text-on-surface font-bold text-body-sm text-center shadow-sm hover:brightness-105 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20quiero%20comprar%201x%20KZ%20EDX%20Lite%20por%20S/.30%20en%20Cusco" rel="noopener noreferrer" target="_blank">
+                WhatsApp
+              </a>
+</div>
+</div>
+</div>
+<!-- 2. KZ EDX Pro -->
+<div class="product-card group rounded-2xl bg-surface-card/85 backdrop-blur-xl p-space-sm shadow-lg flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(0,221,214,0.12)] transition-all duration-300" data-category="gamer" data-name="KZ EDX Pro" data-price="39">
+<div>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="KZ EDX Pro VayoTech Cusco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" id="img-edx-pro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe4NQS-z67wPPSWXyTTzk3j0Qtq0wcRed3q4rxRMtjbpDi_QxNsBGSpKqHNhLZtL8AGC8xcSstomH-v2hP8xrfQ3-UlA7HT4qGVAGM73wfdLDThWvmmFRugdhnpBvUUBabya2ThYkGi04sHdcc0AqKFE-jp3sRUsCO-QzZPlRqFJV37F0iQhkoth86SfHjU3-lERp8xZt95fLJDEatF7oFwxcxZrnx-K1NN_jyTpTnJKsd1gkmcazUPkOSt_PDL2O8i2g"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-badge text-label-badge font-bold">MÁS VENDIDO</span>
+<span class="px-space-xs py-0.5 rounded bg-deal-emerald/90 text-on-surface font-label-badge text-label-badge font-bold">STOCK: 5 UDS</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 rounded-full bg-surface-card/80 backdrop-blur text-on-surface hover:text-tertiary transition-colors shadow" onclick="openModal('KZ EDX Pro', ['https://lh3.googleusercontent.com/aida-public/AB6AXuAe4NQS-z67wPPSWXyTTzk3j0Qtq0wcRed3q4rxRMtjbpDi_QxNsBGSpKqHNhLZtL8AGC8xcSstomH-v2hP8xrfQ3-UlA7HT4qGVAGM73wfdLDThWvmmFRugdhnpBvUUBabya2ThYkGi04sHdcc0AqKFE-jp3sRUsCO-QzZPlRqFJV37F0iQhkoth86SfHjU3-lERp8xZt95fLJDEatF7oFwxcxZrnx-K1NN_jyTpTnJKsd1gkmcazUPkOSt_PDL2O8i2g', 'https://lh3.googleusercontent.com/aida-public/AB6AXuATDGHowxpB-cCSfwa10k8oY2qywIgJ_nsO2mW4t-OIE4ico2pPJdbkmLJyvgvVrod4PWfAMbaEO-AEcA5dkVLYat9m-NUOdEy6aQLSbQh3gnhmreUnmGClqLWH_hhsG31xx0tvuXx8ej9tH8HmNztpw2nk8tsNvZkOL9ZWV8MGjdiL1UYkAo8Ow-1soVNgXmyi9awy_DyiBrkF2SnqILm01mUJQKjRtGLdL7JV0sy5UNMlwY30_FIzcy_ccKuhY1OCzBk'], 'S/. 39.00', 'El rey indiscutible de la gama de entrada. Placa frontal metálica con textura y cavidad de resina importada.')">
+<span class="material-symbols-outlined text-body-md">zoom_in</span>
+</button>
+</div>
+<div class="pt-space-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-body-sm text-tertiary">1DD Dual Circuit</span>
+<span class="text-text-muted text-body-sm line-through">S/. 55.00</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">KZ EDX Pro</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">Bajos potentes y enérgicos, excelente para gaming competitivo y música urbana.</p>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 39.00</span>
+<span class="font-body-sm text-deal-emerald font-semibold block text-body-sm">Stock Inmediato</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-lg">
+<button class="w-4 h-4 rounded-full bg-deal-emerald hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-edx-pro', 'https://lh3.googleusercontent.com/aida-public/AB6AXuAe4NQS-z67wPPSWXyTTzk3j0Qtq0wcRed3q4rxRMtjbpDi_QxNsBGSpKqHNhLZtL8AGC8xcSstomH-v2hP8xrfQ3-UlA7HT4qGVAGM73wfdLDThWvmmFRugdhnpBvUUBabya2ThYkGi04sHdcc0AqKFE-jp3sRUsCO-QzZPlRqFJV37F0iQhkoth86SfHjU3-lERp8xZt95fLJDEatF7oFwxcxZrnx-K1NN_jyTpTnJKsd1gkmcazUPkOSt_PDL2O8i2g')" title="Versión Verde"></button>
+<button class="w-4 h-4 rounded-full bg-secondary hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-edx-pro', 'https://lh3.googleusercontent.com/aida-public/AB6AXuATDGHowxpB-cCSfwa10k8oY2qywIgJ_nsO2mW4t-OIE4ico2pPJdbkmLJyvgvVrod4PWfAMbaEO-AEcA5dkVLYat9m-NUOdEy6aQLSbQh3gnhmreUnmGClqLWH_hhsG31xx0tvuXx8ej9tH8HmNztpw2nk8tsNvZkOL9ZWV8MGjdiL1UYkAo8Ow-1soVNgXmyi9awy_DyiBrkF2SnqILm01mUJQKjRtGLdL7JV0sy5UNMlwY30_FIzcy_ccKuhY1OCzBk')" title="Versión Lila"></button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addToCart('KZ EDX Pro', 39, 'https://lh3.googleusercontent.com/aida-public/AB6AXuAe4NQS-z67wPPSWXyTTzk3j0Qtq0wcRed3q4rxRMtjbpDi_QxNsBGSpKqHNhLZtL8AGC8xcSstomH-v2hP8xrfQ3-UlA7HT4qGVAGM73wfdLDThWvmmFRugdhnpBvUUBabya2ThYkGi04sHdcc0AqKFE-jp3sRUsCO-QzZPlRqFJV37F0iQhkoth86SfHjU3-lERp8xZt95fLJDEatF7oFwxcxZrnx-K1NN_jyTpTnJKsd1gkmcazUPkOSt_PDL2O8i2g')">
+                + Carrito
+              </button>
+<a class="w-full py-2 rounded-lg bg-whatsapp-green text-on-surface font-bold text-body-sm text-center shadow-sm hover:brightness-105 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20quiero%20comprar%201x%20KZ%20EDX%20Pro%20por%20S/.39%20en%20Cusco" rel="noopener noreferrer" target="_blank">
+                WhatsApp
+              </a>
+</div>
+</div>
+</div>
+<!-- 3. KZ EDX Pro X -->
+<div class="product-card group rounded-2xl bg-surface-card/85 backdrop-blur-xl p-space-sm shadow-lg flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(0,221,214,0.12)] transition-all duration-300" data-category="mid" data-name="KZ EDX Pro X" data-price="45">
+<div>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="KZ EDX Pro X VayoTech Cusco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" id="img-edx-prox" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFwQ26rkcFRkcqvRxvfQycOcpz0j9nXkb0SZ_XTkIVhhlkW6JvD8MTHJ5xu2BFbSH-Zh9OB3Scm3vppbrQMJzDUa3_mY2BZjX5q6GP2bLRm7lYNaSkZC1nhqqANHEml1vLWIJMlXworusg5y_FuEUey7v43DTU53hH0vdmS0sxBNOmqnhaBt89TB21WAUsrL2kkJ5AfER88aWwJbxWT8UPxGZR0ZpaOlSVr4FlyMKT3sohW5hnJ6HKZAE3ghDeUD1t3Ys"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded bg-tertiary text-on-tertiary font-label-badge text-label-badge font-bold">NUEVA REVISIÓN</span>
+<span class="px-space-xs py-0.5 rounded bg-deal-emerald/90 text-on-surface font-label-badge text-label-badge font-bold">STOCK: 2 UDS</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 rounded-full bg-surface-card/80 backdrop-blur text-on-surface hover:text-tertiary transition-colors shadow" onclick="openModal('KZ EDX Pro X', ['https://lh3.googleusercontent.com/aida-public/AB6AXuDFwQ26rkcFRkcqvRxvfQycOcpz0j9nXkb0SZ_XTkIVhhlkW6JvD8MTHJ5xu2BFbSH-Zh9OB3Scm3vppbrQMJzDUa3_mY2BZjX5q6GP2bLRm7lYNaSkZC1nhqqANHEml1vLWIJMlXworusg5y_FuEUey7v43DTU53hH0vdmS0sxBNOmqnhaBt89TB21WAUsrL2kkJ5AfER88aWwJbxWT8UPxGZR0ZpaOlSVr4FlyMKT3sohW5hnJ6HKZAE3ghDeUD1t3Ys', 'https://lh3.googleusercontent.com/aida-public/AB6AXuAr9gnbahUagAjmICs52Vl8QiCgQL4kCQhg3z_oPtxx-2SS60FotZlP0i1Y0dEk_8WeKLg0-6piApNNrp9vHL2GakP5IMMB3gAmcNqz0XuyzM3HXEG6YAwrp7_PMCOoI062gF5SWDqm8DI3aB0Mnu3k0Iz7Su3jvkUMKOdWobYkEHfork-3fvRZ9rH7vKtFbfBglIpnYjH7UQ6IIWZDshdpWdxERLr-VLxHJun3f8acchiKpEYk1OIZC50v3cIpbsyfkQY'], 'S/. 45.00', 'Optimización de circuito acústico con mayor definición en medios y agudos cristalinos.')">
+<span class="material-symbols-outlined text-body-md">zoom_in</span>
+</button>
+</div>
+<div class="pt-space-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-body-sm text-tertiary">Dynamic Driver X</span>
+<span class="text-text-muted text-body-sm line-through">S/. 65.00</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">KZ EDX Pro X</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">Cámara acústica rediseñada para menor distorsión armónica.</p>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 45.00</span>
+<span class="font-body-sm text-deal-emerald font-semibold block text-body-sm">Wanchaq Pickup</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-lg">
+<button class="w-4 h-4 rounded-full bg-deal-emerald hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-edx-prox', 'https://lh3.googleusercontent.com/aida-public/AB6AXuDFwQ26rkcFRkcqvRxvfQycOcpz0j9nXkb0SZ_XTkIVhhlkW6JvD8MTHJ5xu2BFbSH-Zh9OB3Scm3vppbrQMJzDUa3_mY2BZjX5q6GP2bLRm7lYNaSkZC1nhqqANHEml1vLWIJMlXworusg5y_FuEUey7v43DTU53hH0vdmS0sxBNOmqnhaBt89TB21WAUsrL2kkJ5AfER88aWwJbxWT8UPxGZR0ZpaOlSVr4FlyMKT3sohW5hnJ6HKZAE3ghDeUD1t3Ys')" title="Versión Verde"></button>
+<button class="w-4 h-4 rounded-full bg-secondary hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-edx-prox', 'https://lh3.googleusercontent.com/aida-public/AB6AXuAr9gnbahUagAjmICs52Vl8QiCgQL4kCQhg3z_oPtxx-2SS60FotZlP0i1Y0dEk_8WeKLg0-6piApNNrp9vHL2GakP5IMMB3gAmcNqz0XuyzM3HXEG6YAwrp7_PMCOoI062gF5SWDqm8DI3aB0Mnu3k0Iz7Su3jvkUMKOdWobYkEHfork-3fvRZ9rH7vKtFbfBglIpnYjH7UQ6IIWZDshdpWdxERLr-VLxHJun3f8acchiKpEYk1OIZC50v3cIpbsyfkQY')" title="Versión Lila"></button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addToCart('KZ EDX Pro X', 45, 'https://lh3.googleusercontent.com/aida-public/AB6AXuDFwQ26rkcFRkcqvRxvfQycOcpz0j9nXkb0SZ_XTkIVhhlkW6JvD8MTHJ5xu2BFbSH-Zh9OB3Scm3vppbrQMJzDUa3_mY2BZjX5q6GP2bLRm7lYNaSkZC1nhqqANHEml1vLWIJMlXworusg5y_FuEUey7v43DTU53hH0vdmS0sxBNOmqnhaBt89TB21WAUsrL2kkJ5AfER88aWwJbxWT8UPxGZR0ZpaOlSVr4FlyMKT3sohW5hnJ6HKZAE3ghDeUD1t3Ys')">
+                + Carrito
+              </button>
+<a class="w-full py-2 rounded-lg bg-whatsapp-green text-on-surface font-bold text-body-sm text-center shadow-sm hover:brightness-105 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20quiero%20comprar%201x%20KZ%20EDX%20Pro%20X%20por%20S/.45%20en%20Cusco" rel="noopener noreferrer" target="_blank">
+                WhatsApp
+              </a>
+</div>
+</div>
+</div>
+<!-- 4. KZ Gale Metal -->
+<div class="product-card group rounded-2xl bg-surface-card/85 backdrop-blur-xl p-space-sm shadow-lg flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(0,221,214,0.12)] transition-all duration-300" data-category="mid" data-name="KZ Gale Metal" data-price="50">
+<div>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="KZ Gale Metal VayoTech Cusco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" id="img-gale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRcXmhqOZ3_m7XjO4bvUXB16eP-AocKLRYVAXxIMJl58DZN4SKgQogNPPhy7YvDPGpNJCmYVVv2pPI7C2fBI55R_YMnMPRW58QkGzk1vJW6Z23-Dv8fLBaQDH_2yFhkFiSk3Yw4pOKCZTV2UjZ04Oc5Gw3af8oiTEOxLRI-g1Faak-yHgD0zXDqyGiS9xzhtjPC61QfJjuaDARRG11Zz33TEGBfmrA8VQPDjXVL834elJw_JRu3vJoT-dgUnmh1vqJMvw"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-badge text-label-badge font-bold animate-pulse">¡ÚLTIMA UNIDAD!</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 rounded-full bg-surface-card/80 backdrop-blur text-on-surface hover:text-tertiary transition-colors shadow" onclick="openModal('KZ Gale Metal', ['https://lh3.googleusercontent.com/aida-public/AB6AXuCRcXmhqOZ3_m7XjO4bvUXB16eP-AocKLRYVAXxIMJl58DZN4SKgQogNPPhy7YvDPGpNJCmYVVv2pPI7C2fBI55R_YMnMPRW58QkGzk1vJW6Z23-Dv8fLBaQDH_2yFhkFiSk3Yw4pOKCZTV2UjZ04Oc5Gw3af8oiTEOxLRI-g1Faak-yHgD0zXDqyGiS9xzhtjPC61QfJjuaDARRG11Zz33TEGBfmrA8VQPDjXVL834elJw_JRu3vJoT-dgUnmh1vqJMvw', 'https://lh3.googleusercontent.com/aida-public/AB6AXuAfIewqxpllS3IUPx9kR16aD9Dk5joiwZ5qItc4EISurDOP09pGlxW9UhKbeqN2gM3J0siBtCdb7nULTz9P4_dRoCFwtgcVIACRIwwXP2FzJt9FnYidx5-Qn34E9q-DfIKNDKUGGIfSiPb-qUb3NHI04sKRw_xxycHnaqQ22rU1x6SR_9xlFKK6IANc7xGYNxsegGrr5NAmbHYTytVV2f_Cz61oRf95XzP2N5TFjXT50GAM504OiWZdYQBaaBtpW0PHTgc'], 'S/. 50.00', 'Cuerpo full metálico en aleación de zinc de grado aeroespacial. Durabilidad extrema y sonido ultra natural.')">
+<span class="material-symbols-outlined text-body-md">zoom_in</span>
+</button>
+</div>
+<div class="pt-space-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-body-sm text-tertiary">All-Metal Body</span>
+<span class="text-text-muted text-body-sm line-through">S/. 75.00</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">KZ Gale Metal</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">Construcción pesada premium con resonancia controlada para instrumentación.</p>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 50.00</span>
+<span class="font-body-sm text-error font-semibold block text-body-sm">Remate Final</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-lg">
+<button class="w-4 h-4 rounded-full bg-deal-emerald hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-gale', 'https://lh3.googleusercontent.com/aida-public/AB6AXuCRcXmhqOZ3_m7XjO4bvUXB16eP-AocKLRYVAXxIMJl58DZN4SKgQogNPPhy7YvDPGpNJCmYVVv2pPI7C2fBI55R_YMnMPRW58QkGzk1vJW6Z23-Dv8fLBaQDH_2yFhkFiSk3Yw4pOKCZTV2UjZ04Oc5Gw3af8oiTEOxLRI-g1Faak-yHgD0zXDqyGiS9xzhtjPC61QfJjuaDARRG11Zz33TEGBfmrA8VQPDjXVL834elJw_JRu3vJoT-dgUnmh1vqJMvw')" title="Versión Verde"></button>
+<button class="w-4 h-4 rounded-full bg-secondary hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-gale', 'https://lh3.googleusercontent.com/aida-public/AB6AXuAfIewqxpllS3IUPx9kR16aD9Dk5joiwZ5qItc4EISurDOP09pGlxW9UhKbeqN2gM3J0siBtCdb7nULTz9P4_dRoCFwtgcVIACRIwwXP2FzJt9FnYidx5-Qn34E9q-DfIKNDKUGGIfSiPb-qUb3NHI04sKRw_xxycHnaqQ22rU1x6SR_9xlFKK6IANc7xGYNxsegGrr5NAmbHYTytVV2f_Cz61oRf95XzP2N5TFjXT50GAM504OiWZdYQBaaBtpW0PHTgc')" title="Versión Lila"></button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addToCart('KZ Gale Metal', 50, 'https://lh3.googleusercontent.com/aida-public/AB6AXuCRcXmhqOZ3_m7XjO4bvUXB16eP-AocKLRYVAXxIMJl58DZN4SKgQogNPPhy7YvDPGpNJCmYVVv2pPI7C2fBI55R_YMnMPRW58QkGzk1vJW6Z23-Dv8fLBaQDH_2yFhkFiSk3Yw4pOKCZTV2UjZ04Oc5Gw3af8oiTEOxLRI-g1Faak-yHgD0zXDqyGiS9xzhtjPC61QfJjuaDARRG11Zz33TEGBfmrA8VQPDjXVL834elJw_JRu3vJoT-dgUnmh1vqJMvw')">
+                + Carrito
+              </button>
+<a class="w-full py-2 rounded-lg bg-whatsapp-green text-on-surface font-bold text-body-sm text-center shadow-sm hover:brightness-105 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20quiero%20la%20última%20unidad%20de%20KZ%20Gale%20Metal%20por%20S/.50" rel="noopener noreferrer" target="_blank">
+                WhatsApp
+              </a>
+</div>
+</div>
+</div>
+<!-- 5. KZ DQS Semi-Abierto -->
+<div class="product-card group rounded-2xl bg-surface-card/85 backdrop-blur-xl p-space-sm shadow-lg flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(0,221,214,0.12)] transition-all duration-300" data-category="mid" data-name="KZ DQS Semi-Abierto" data-price="60">
+<div>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="KZ DQS Semi-Abierto VayoTech Cusco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" id="img-dqs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeTdI6uRKPDOfjVVfmBjZi5KHoStsQqqW1U6sgv7Guxa6r1DrHCnZwbKqrK9cXTcOShViGw7QyZuhK5vrtXK4s02UOByULeKlXPLzQqveR-nP_U8RmRT8oTteh_kk8DlhhVoAPy7jqz3g4rXevL6V0Qj087UX92lduv2G99m_6Hav8DysvYRSzdSIb8v28ZHhiktzEU08ltPWhOIZqpNK1A1AicBWh_SGJjeBDd2KkXss5ekDyBCPRhMluxGzO7S4pNBg"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary font-label-badge text-label-badge font-bold">ESCENA AMPLIA</span>
+<span class="px-space-xs py-0.5 rounded bg-deal-emerald/90 text-on-surface font-label-badge text-label-badge font-bold">STOCK: 2 UDS</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 rounded-full bg-surface-card/80 backdrop-blur text-on-surface hover:text-tertiary transition-colors shadow" onclick="openModal('KZ DQS Semi-Abierto', ['https://lh3.googleusercontent.com/aida-public/AB6AXuBeTdI6uRKPDOfjVVfmBjZi5KHoStsQqqW1U6sgv7Guxa6r1DrHCnZwbKqrK9cXTcOShViGw7QyZuhK5vrtXK4s02UOByULeKlXPLzQqveR-nP_U8RmRT8oTteh_kk8DlhhVoAPy7jqz3g4rXevL6V0Qj087UX92lduv2G99m_6Hav8DysvYRSzdSIb8v28ZHhiktzEU08ltPWhOIZqpNK1A1AicBWh_SGJjeBDd2KkXss5ekDyBCPRhMluxGzO7S4pNBg', 'https://lh3.googleusercontent.com/aida-public/AB6AXuD1H9lBSROvqMTvetL0umq083CSnR_cLwI74x4Iak2pmrU30qTHwed4PTAGAb8eXsleTMbhbnVTmmMgJRuBY3MJiObSZCRB7zLpU9o4JAA-yTPbxBvbH1Ug3zVWMGCReQMo0K1_y5fEgHuTPMaPo6yUaG-snHNvi2pxiQSJMFvhdK5rLomK2j3xGax6FDd5DhHmC9oJP0vD8GQYfpm_aLvz8-2vf53X6cdaVcGMTmi6FxSoYH4Ssntf2lMxT2A5yqH4sC4'], 'S/. 60.00', 'Diseño semi-abierto que expande el soundstage acústico. Menor presión en el tímpano para sesiones maratónicas.')">
+<span class="material-symbols-outlined text-body-md">zoom_in</span>
+</button>
+</div>
+<div class="pt-space-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-body-sm text-tertiary">Semi-Open Acoustic</span>
+<span class="text-text-muted text-body-sm line-through">S/. 85.00</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">KZ DQS Semi-Abierto</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">Ideal para productores y mezcla de audio con respuesta lineal y espaciosa.</p>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 60.00</span>
+<span class="font-body-sm text-deal-emerald font-semibold block text-body-sm">Cusco Inmediato</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-lg">
+<button class="w-4 h-4 rounded-full bg-deal-emerald hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-dqs', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBeTdI6uRKPDOfjVVfmBjZi5KHoStsQqqW1U6sgv7Guxa6r1DrHCnZwbKqrK9cXTcOShViGw7QyZuhK5vrtXK4s02UOByULeKlXPLzQqveR-nP_U8RmRT8oTteh_kk8DlhhVoAPy7jqz3g4rXevL6V0Qj087UX92lduv2G99m_6Hav8DysvYRSzdSIb8v28ZHhiktzEU08ltPWhOIZqpNK1A1AicBWh_SGJjeBDd2KkXss5ekDyBCPRhMluxGzO7S4pNBg')" title="Versión Verde"></button>
+<button class="w-4 h-4 rounded-full bg-secondary hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-dqs', 'https://lh3.googleusercontent.com/aida-public/AB6AXuD1H9lBSROvqMTvetL0umq083CSnR_cLwI74x4Iak2pmrU30qTHwed4PTAGAb8eXsleTMbhbnVTmmMgJRuBY3MJiObSZCRB7zLpU9o4JAA-yTPbxBvbH1Ug3zVWMGCReQMo0K1_y5fEgHuTPMaPo6yUaG-snHNvi2pxiQSJMFvhdK5rLomK2j3xGax6FDd5DhHmC9oJP0vD8GQYfpm_aLvz8-2vf53X6cdaVcGMTmi6FxSoYH4Ssntf2lMxT2A5yqH4sC4')" title="Versión Lila"></button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addToCart('KZ DQS Semi-Abierto', 60, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBeTdI6uRKPDOfjVVfmBjZi5KHoStsQqqW1U6sgv7Guxa6r1DrHCnZwbKqrK9cXTcOShViGw7QyZuhK5vrtXK4s02UOByULeKlXPLzQqveR-nP_U8RmRT8oTteh_kk8DlhhVoAPy7jqz3g4rXevL6V0Qj087UX92lduv2G99m_6Hav8DysvYRSzdSIb8v28ZHhiktzEU08ltPWhOIZqpNK1A1AicBWh_SGJjeBDd2KkXss5ekDyBCPRhMluxGzO7S4pNBg')">
+                + Carrito
+              </button>
+<a class="w-full py-2 rounded-lg bg-whatsapp-green text-on-surface font-bold text-body-sm text-center shadow-sm hover:brightness-105 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20quiero%20comprar%20KZ%20DQS%20por%20S/.60%20en%20Cusco" rel="noopener noreferrer" target="_blank">
+                WhatsApp
+              </a>
+</div>
+</div>
+</div>
+<!-- 6. KZ Castor Harman con Switches -->
+<div class="product-card group rounded-2xl bg-surface-card/85 backdrop-blur-xl p-space-sm shadow-lg flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(0,221,214,0.12)] transition-all duration-300" data-category="mid" data-name="KZ Castor Harman" data-price="65">
+<div>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="KZ Castor Harman VayoTech Cusco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" id="img-castor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCFyAomr-ihaSPDLUNggdIv8KceC0PmCd6yzJSklQzpTh0vf55b5EoVhqsdWJ3dD0rrzEbsWlcb9M_gjkgxxmM63vAs5B8GIKpUVZ2W1-B9U-V-ahydheuWkECwbQQPWOZWv9qu-_DuGZ4JWvd7pmzS6mwN1HUb-XQkVHAHrnLcK4DsewnclTq8UZZdF9AERrwRwxemdc4LIr-vqs6_blGzWQ2r7klEX0rR6UO67PddMgNmdYtLikk3c8jNOraQc1PDu8"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-badge text-label-badge font-bold">4 SWITCHES FÍSICOS</span>
+<span class="px-space-xs py-0.5 rounded bg-deal-emerald/90 text-on-surface font-label-badge text-label-badge font-bold">STOCK: 2 UDS</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 rounded-full bg-surface-card/80 backdrop-blur text-on-surface hover:text-tertiary transition-colors shadow" onclick="openModal('KZ Castor Harman', ['https://lh3.googleusercontent.com/aida-public/AB6AXuBCFyAomr-ihaSPDLUNggdIv8KceC0PmCd6yzJSklQzpTh0vf55b5EoVhqsdWJ3dD0rrzEbsWlcb9M_gjkgxxmM63vAs5B8GIKpUVZ2W1-B9U-V-ahydheuWkECwbQQPWOZWv9qu-_DuGZ4JWvd7pmzS6mwN1HUb-XQkVHAHrnLcK4DsewnclTq8UZZdF9AERrwRwxemdc4LIr-vqs6_blGzWQ2r7klEX0rR6UO67PddMgNmdYtLikk3c8jNOraQc1PDu8'], 'S/. 65.00', 'Doble driver dinámico apilado con 4 interruptores mecánicos para 16 perfiles de ecualización diferentes.')">
+<span class="material-symbols-outlined text-body-md">zoom_in</span>
+</button>
+</div>
+<div class="pt-space-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-body-sm text-tertiary">2DD Harman Target</span>
+<span class="text-text-muted text-body-sm line-through">S/. 95.00</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">KZ Castor Harman</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">Ajuste físico de bajos y agudos. El favorito de los gamers profesionales en Cusco.</p>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 65.00</span>
+<span class="font-body-sm text-deal-emerald font-semibold block text-body-sm">Plaza San Francisco</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-muted">Incluye llave switch</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addToCart('KZ Castor Harman con Switches', 65, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBCFyAomr-ihaSPDLUNggdIv8KceC0PmCd6yzJSklQzpTh0vf55b5EoVhqsdWJ3dD0rrzEbsWlcb9M_gjkgxxmM63vAs5B8GIKpUVZ2W1-B9U-V-ahydheuWkECwbQQPWOZWv9qu-_DuGZ4JWvd7pmzS6mwN1HUb-XQkVHAHrnLcK4DsewnclTq8UZZdF9AERrwRwxemdc4LIr-vqs6_blGzWQ2r7klEX0rR6UO67PddMgNmdYtLikk3c8jNOraQc1PDu8')">
+                + Carrito
+              </button>
+<a class="w-full py-2 rounded-lg bg-whatsapp-green text-on-surface font-bold text-body-sm text-center shadow-sm hover:brightness-105 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20quiero%20comprar%20KZ%20Castor%20Harman%20por%20S/.65%20en%20Cusco" rel="noopener noreferrer" target="_blank">
+                WhatsApp
+              </a>
+</div>
+</div>
+</div>
+<!-- 7. KZ Pisces 2DD Type-C -->
+<div class="product-card group rounded-2xl bg-surface-card/85 backdrop-blur-xl p-space-sm shadow-lg flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(0,221,214,0.12)] transition-all duration-300" data-category="mid" data-name="KZ Pisces Type-C" data-price="65">
+<div>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="KZ Pisces Type-C VayoTech Cusco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" id="img-pisces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA_Dq6eBNWjol0q9w5R1x91L3Y3wlVsZLdGWpbxPoEbpjmts7EN--b1NMbio44RrDVp0nxO5vt53X-kgcC0vcVMQ1Ivp9esAtvahfTB6B2XRVa2NF8452pTckUQbUtrhv6drtrCN5ujyi7hzYAMAWgHqfWFGw77BXad9RRJY_2lUHCpnJuS8J_14zZtqFQVbXgwS3QBBtTcP9N1_T62IQbPB9Q21RSI9YMqCy68tL37BMYmlHNIhkz8purViqalN-8tbo"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-badge text-label-badge font-bold animate-pulse">¡ÚLTIMA UNIDAD!</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-badge text-label-badge font-bold">DAC TYPE-C</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 rounded-full bg-surface-card/80 backdrop-blur text-on-surface hover:text-tertiary transition-colors shadow" onclick="openModal('KZ Pisces Type-C', ['https://lh3.googleusercontent.com/aida-public/AB6AXuAA_Dq6eBNWjol0q9w5R1x91L3Y3wlVsZLdGWpbxPoEbpjmts7EN--b1NMbio44RrDVp0nxO5vt53X-kgcC0vcVMQ1Ivp9esAtvahfTB6B2XRVa2NF8452pTckUQbUtrhv6drtrCN5ujyi7hzYAMAWgHqfWFGw77BXad9RRJY_2lUHCpnJuS8J_14zZtqFQVbXgwS3QBBtTcP9N1_T62IQbPB9Q21RSI9YMqCy68tL37BMYmlHNIhkz8purViqalN-8tbo', 'https://lh3.googleusercontent.com/aida-public/AB6AXuA7jdyoXyAHYSsYVfvIgpSLvItD74EjHs2k9D3-Y4Twndatte-U2Fkf5iMpogdar4UgYwV14M20fMfxLB_XVWoetCQfKE3QLwe4V7DYv7nMfe7fqXXHx6Qt-eGKCAeA0sZu3hom2qkc6i5yyLu2KcRypiSFgPFl_nN3afpT9eL9lZapNu4KkeebnvtHdayXWEqD3Lprb5Jp8oy04A4jvA5uVmiGojemVtIqz4VPMwFsQFu8s9RV1TUf-9oO7bcHxFsLJ64'], 'S/. 65.00', 'Conector digital directo USB Type-C con chip DAC integrado de 24bit/96kHz. Conéctalo a tu smartphone sin adaptadores.')">
+<span class="material-symbols-outlined text-body-md">zoom_in</span>
+</button>
+</div>
+<div class="pt-space-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-body-sm text-tertiary">Direct Type-C DAC</span>
+<span class="text-text-muted text-body-sm line-through">S/. 90.00</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">KZ Pisces Type-C</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">Sonido digital sin pérdidas directamente para iPhone 15/16, Samsung y iPads.</p>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 65.00</span>
+<span class="font-body-sm text-error font-semibold block text-body-sm">Pieza Única</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-lg">
+<button class="w-4 h-4 rounded-full bg-deal-emerald hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-pisces', 'https://lh3.googleusercontent.com/aida-public/AB6AXuAA_Dq6eBNWjol0q9w5R1x91L3Y3wlVsZLdGWpbxPoEbpjmts7EN--b1NMbio44RrDVp0nxO5vt53X-kgcC0vcVMQ1Ivp9esAtvahfTB6B2XRVa2NF8452pTckUQbUtrhv6drtrCN5ujyi7hzYAMAWgHqfWFGw77BXad9RRJY_2lUHCpnJuS8J_14zZtqFQVbXgwS3QBBtTcP9N1_T62IQbPB9Q21RSI9YMqCy68tL37BMYmlHNIhkz8purViqalN-8tbo')" title="Versión Verde"></button>
+<button class="w-4 h-4 rounded-full bg-secondary hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-pisces', 'https://lh3.googleusercontent.com/aida-public/AB6AXuA7jdyoXyAHYSsYVfvIgpSLvItD74EjHs2k9D3-Y4Twndatte-U2Fkf5iMpogdar4UgYwV14M20fMfxLB_XVWoetCQfKE3QLwe4V7DYv7nMfe7fqXXHx6Qt-eGKCAeA0sZu3hom2qkc6i5yyLu2KcRypiSFgPFl_nN3afpT9eL9lZapNu4KkeebnvtHdayXWEqD3Lprb5Jp8oy04A4jvA5uVmiGojemVtIqz4VPMwFsQFu8s9RV1TUf-9oO7bcHxFsLJ64')" title="Versión Lila"></button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addToCart('KZ Pisces 2DD Type-C', 65, 'https://lh3.googleusercontent.com/aida-public/AB6AXuAA_Dq6eBNWjol0q9w5R1x91L3Y3wlVsZLdGWpbxPoEbpjmts7EN--b1NMbio44RrDVp0nxO5vt53X-kgcC0vcVMQ1Ivp9esAtvahfTB6B2XRVa2NF8452pTckUQbUtrhv6drtrCN5ujyi7hzYAMAWgHqfWFGw77BXad9RRJY_2lUHCpnJuS8J_14zZtqFQVbXgwS3QBBtTcP9N1_T62IQbPB9Q21RSI9YMqCy68tL37BMYmlHNIhkz8purViqalN-8tbo')">
+                + Carrito
+              </button>
+<a class="w-full py-2 rounded-lg bg-whatsapp-green text-on-surface font-bold text-body-sm text-center shadow-sm hover:brightness-105 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20quiero%20el%20KZ%20Pisces%20Type-C%20por%20S/.65" rel="noopener noreferrer" target="_blank">
+                WhatsApp
+              </a>
+</div>
+</div>
+</div>
+<!-- 8. KZ ZSN Pro 2 -->
+<div class="product-card group rounded-2xl bg-surface-card/85 backdrop-blur-xl p-space-sm shadow-lg flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(0,221,214,0.12)] transition-all duration-300" data-category="flagship" data-name="KZ ZSN Pro 2" data-price="75">
+<div>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="KZ ZSN Pro 2 VayoTech Cusco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" id="img-zsn-pro2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTOblfSPn-aZ2GCYefzHw-hpphrlzoY_F0GeYz5mn4Pi9JB3Xn4vrLlS35wrC5KO4UsE315YEvVKmDlrExgQyqsPssi2kcAXkM4BEzAVXlAmslebcoZohdoOOXuePQMunhZlzcijZVODLDeu15dm4Bw1RGHfxePeLuvYdKOe1GGaHZBEE8wdyR_1okUJZ9k0dGcEfz2H91Cc7pAtNdfHYstQH0l-Wc_zxAOgExXbeTB6YF4WgAokp2edXJTDlPtbz8g-E"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-badge text-label-badge font-bold">HÍBRIDO DD + BA</span>
+<span class="px-space-xs py-0.5 rounded bg-deal-emerald/90 text-on-surface font-label-badge text-label-badge font-bold">STOCK: 2 UDS</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 rounded-full bg-surface-card/80 backdrop-blur text-on-surface hover:text-tertiary transition-colors shadow" onclick="openModal('KZ ZSN Pro 2 Híbrido', ['https://lh3.googleusercontent.com/aida-public/AB6AXuBTOblfSPn-aZ2GCYefzHw-hpphrlzoY_F0GeYz5mn4Pi9JB3Xn4vrLlS35wrC5KO4UsE315YEvVKmDlrExgQyqsPssi2kcAXkM4BEzAVXlAmslebcoZohdoOOXuePQMunhZlzcijZVODLDeu15dm4Bw1RGHfxePeLuvYdKOe1GGaHZBEE8wdyR_1okUJZ9k0dGcEfz2H91Cc7pAtNdfHYstQH0l-Wc_zxAOgExXbeTB6YF4WgAokp2edXJTDlPtbz8g-E'], 'S/. 75.00', 'Segunda generación con armadura balanceada 30095 mejorada. Cara metálica de aleación pulida con cortes en láser.')">
+<span class="material-symbols-outlined text-body-md">zoom_in</span>
+</button>
+</div>
+<div class="pt-space-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-body-sm text-secondary">Gen2 Innovation</span>
+<span class="text-text-muted text-body-sm line-through">S/. 110.00</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">KZ ZSN Pro 2</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">Claridad instrumental quirúrgica con cuerpo de graves rápido y controlado.</p>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 75.00</span>
+<span class="font-body-sm text-deal-emerald font-semibold block text-body-sm">Real Plaza Pick</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-muted">1DD + 1BA Híbrido</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addToCart('KZ ZSN Pro 2 Híbrido', 75, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBTOblfSPn-aZ2GCYefzHw-hpphrlzoY_F0GeYz5mn4Pi9JB3Xn4vrLlS35wrC5KO4UsE315YEvVKmDlrExgQyqsPssi2kcAXkM4BEzAVXlAmslebcoZohdoOOXuePQMunhZlzcijZVODLDeu15dm4Bw1RGHfxePeLuvYdKOe1GGaHZBEE8wdyR_1okUJZ9k0dGcEfz2H91Cc7pAtNdfHYstQH0l-Wc_zxAOgExXbeTB6YF4WgAokp2edXJTDlPtbz8g-E')">
+                + Carrito
+              </button>
+<a class="w-full py-2 rounded-lg bg-whatsapp-green text-on-surface font-bold text-body-sm text-center shadow-sm hover:brightness-105 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20quiero%20comprar%20KZ%20ZSN%20Pro%202%20por%20S/.75%20en%20Cusco" rel="noopener noreferrer" target="_blank">
+                WhatsApp
+              </a>
+</div>
+</div>
+</div>
+<!-- 9. KZ Castor Pro 2026 -->
+<div class="product-card group rounded-2xl bg-surface-card/85 backdrop-blur-xl p-space-sm shadow-lg flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(0,221,214,0.12)] transition-all duration-300" data-category="flagship" data-name="KZ Castor Pro 2026" data-price="85">
+<div>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="KZ Castor Pro 2026 VayoTech Cusco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" id="img-castor-pro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6M5BB-n7sv5S_gSfWgM8P_fILEg4wy_GqjB4fDCSrZI4W5QKT8ZfyTvtKTk1boKhqOXllZFZMhRWWLHfjeuSLyyx-o2fmy1jSRBNZzKLSbmzW2Mgq4Hjv8Zd80iNXKtTX6zPffw6P9xL-ptVg_FIHevYdeLy7RE67mN7uJOiKQNIahzAYh3oYgwuuICNubss_yTOEyV1klujLJPmNPcksMQ-Zu_AG1IQSPEusQINgxaF7jHpFuDUbKGu2uVm-pVsLnBA"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded bg-tertiary text-on-tertiary font-label-badge text-label-badge font-bold">EDICIÓN 2026</span>
+<span class="px-space-xs py-0.5 rounded bg-deal-emerald/90 text-on-surface font-label-badge text-label-badge font-bold">STOCK: 2 UDS</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 rounded-full bg-surface-card/80 backdrop-blur text-on-surface hover:text-tertiary transition-colors shadow" onclick="openModal('KZ Castor Pro 2026', ['https://lh3.googleusercontent.com/aida-public/AB6AXuB6M5BB-n7sv5S_gSfWgM8P_fILEg4wy_GqjB4fDCSrZI4W5QKT8ZfyTvtKTk1boKhqOXllZFZMhRWWLHfjeuSLyyx-o2fmy1jSRBNZzKLSbmzW2Mgq4Hjv8Zd80iNXKtTX6zPffw6P9xL-ptVg_FIHevYdeLy7RE67mN7uJOiKQNIahzAYh3oYgwuuICNubss_yTOEyV1klujLJPmNPcksMQ-Zu_AG1IQSPEusQINgxaF7jHpFuDUbKGu2uVm-pVsLnBA'], 'S/. 85.00', 'La versión más avanzada de la familia Castor con bobinas acústicas CCAW y aislamiento reforzado para monitoreo de escenario.')">
+<span class="material-symbols-outlined text-body-md">zoom_in</span>
+</button>
+</div>
+<div class="pt-space-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-body-sm text-tertiary">Castor Pro Flagship</span>
+<span class="text-text-muted text-body-sm line-through">S/. 120.00</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">KZ Castor Pro 2026</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">Placa de aluminio espejado y filtro antipolvo de oro. Máxima resolución musical.</p>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 85.00</span>
+<span class="font-body-sm text-deal-emerald font-semibold block text-body-sm">Garantía 6M</span>
+</div>
+<span class="font-label-badge text-label-badge text-text-muted">High-End IEM</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addToCart('KZ Castor Pro 2026', 85, 'https://lh3.googleusercontent.com/aida-public/AB6AXuB6M5BB-n7sv5S_gSfWgM8P_fILEg4wy_GqjB4fDCSrZI4W5QKT8ZfyTvtKTk1boKhqOXllZFZMhRWWLHfjeuSLyyx-o2fmy1jSRBNZzKLSbmzW2Mgq4Hjv8Zd80iNXKtTX6zPffw6P9xL-ptVg_FIHevYdeLy7RE67mN7uJOiKQNIahzAYh3oYgwuuICNubss_yTOEyV1klujLJPmNPcksMQ-Zu_AG1IQSPEusQINgxaF7jHpFuDUbKGu2uVm-pVsLnBA')">
+                + Carrito
+              </button>
+<a class="w-full py-2 rounded-lg bg-whatsapp-green text-on-surface font-bold text-body-sm text-center shadow-sm hover:brightness-105 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20quiero%20comprar%20KZ%20Castor%20Pro%202026%20por%20S/.85%20en%20Cusco" rel="noopener noreferrer" target="_blank">
+                WhatsApp
+              </a>
+</div>
+</div>
+</div>
+<!-- 10. KZ Vader Flagship 3DD -->
+<div class="product-card group rounded-2xl bg-surface-card/85 backdrop-blur-xl p-space-sm shadow-lg flex flex-col justify-between hover:shadow-[0_8px_30px_rgba(0,221,214,0.12)] transition-all duration-300" data-category="flagship" data-name="KZ Vader Flagship 3DD" data-price="90">
+<div>
+<div class="relative w-full aspect-square rounded-xl overflow-hidden bg-surface-container">
+<img alt="KZ Vader Flagship 3DD VayoTech Cusco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" id="img-vader" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK9njsbglt1sutzYx4rkSt3jl1AgqPeG5qQMGsXuUm7llx0rLyZ4O10KEF6PjLhOxvXzOgrNNOZMaYcaVDkA2NHA5d3NvExWng8I-rgONPQ2K27RdP-8udldyQRA8_s09CPUG0OrdD5hdYNP7pp-T-cVOMEayOYgk6DzZdAe7S-eOiZltgTQQ_Ds7kM09xSorSnCbmtRGmNOnLar2JIvSf0cU5o1shM3ePjMeJqLJdt35ScHaxhcJLXyS-bdGHZMom_pw"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-badge text-label-badge font-bold animate-pulse">¡ÚLTIMA UNIDAD!</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-deal-emerald font-label-badge text-label-badge font-bold">TRIPLE DRIVER</span>
+</div>
+<button class="absolute bottom-2 right-2 p-2 rounded-full bg-surface-card/80 backdrop-blur text-on-surface hover:text-tertiary transition-colors shadow" onclick="openModal('KZ Vader Flagship 3DD', ['https://lh3.googleusercontent.com/aida-public/AB6AXuAK9njsbglt1sutzYx4rkSt3jl1AgqPeG5qQMGsXuUm7llx0rLyZ4O10KEF6PjLhOxvXzOgrNNOZMaYcaVDkA2NHA5d3NvExWng8I-rgONPQ2K27RdP-8udldyQRA8_s09CPUG0OrdD5hdYNP7pp-T-cVOMEayOYgk6DzZdAe7S-eOiZltgTQQ_Ds7kM09xSorSnCbmtRGmNOnLar2JIvSf0cU5o1shM3ePjMeJqLJdt35ScHaxhcJLXyS-bdGHZMom_pw', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBwqUoqWQNg9kuqxYBZerIkkXoXeCbb83y59KWv_28x4_EB-4wxaf4eK36NoGJHLOWpcvj79TdoLOSY7BRWTIpi-y_rb6hoqVmHpnsm1OtkMcPw4hewRoDGDDy3RWAPNwNnVDCq_uGUOVgYl8RtOG9XLA_kg6olP7YV2eVsAU1Z4kK9zmZftLxAi6l7jPVkHGHUadwU_yfpsnYNgMMwJAZ0Fei-zkugMOBjNPRfAccBhNZBy6jUZQiPnkh4j9DxwBauMyg'], 'S/. 90.00', 'Top de línea con triple driver dinámico de 8mm independientes para subgraves, medios y agudos cristalinos.')">
+<span class="material-symbols-outlined text-body-md">zoom_in</span>
+</button>
+</div>
+<div class="pt-space-sm space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-body-sm text-secondary">3 x Dynamic Drivers</span>
+<span class="text-text-muted text-body-sm line-through">S/. 135.00</span>
+</div>
+<h3 class="font-headline-md text-body-lg text-on-surface font-bold">KZ Vader Flagship</h3>
+<p class="font-body-sm text-body-sm text-text-muted line-clamp-2">Potencia sonora masiva, separación milimétrica de capas y textura de bajos insuperable.</p>
+</div>
+</div>
+<div class="pt-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-price-integer text-price-integer text-primary-container font-bold">S/. 90.00</span>
+<span class="font-body-sm text-error font-semibold block text-body-sm">Remate Almacén</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-1 rounded-lg">
+<button class="w-4 h-4 rounded-full bg-deal-emerald hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-vader', 'https://lh3.googleusercontent.com/aida-public/AB6AXuAK9njsbglt1sutzYx4rkSt3jl1AgqPeG5qQMGsXuUm7llx0rLyZ4O10KEF6PjLhOxvXzOgrNNOZMaYcaVDkA2NHA5d3NvExWng8I-rgONPQ2K27RdP-8udldyQRA8_s09CPUG0OrdD5hdYNP7pp-T-cVOMEayOYgk6DzZdAe7S-eOiZltgTQQ_Ds7kM09xSorSnCbmtRGmNOnLar2JIvSf0cU5o1shM3ePjMeJqLJdt35ScHaxhcJLXyS-bdGHZMom_pw')" title="Versión Verde"></button>
+<button class="w-4 h-4 rounded-full bg-secondary hover:ring-2 hover:ring-on-surface" onclick="switchImage('img-vader', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBwqUoqWQNg9kuqxYBZerIkkXoXeCbb83y59KWv_28x4_EB-4wxaf4eK36NoGJHLOWpcvj79TdoLOSY7BRWTIpi-y_rb6hoqVmHpnsm1OtkMcPw4hewRoDGDDy3RWAPNwNnVDCq_uGUOVgYl8RtOG9XLA_kg6olP7YV2eVsAU1Z4kK9zmZftLxAi6l7jPVkHGHUadwU_yfpsnYNgMMwJAZ0Fei-zkugMOBjNPRfAccBhNZBy6jUZQiPnkh4j9DxwBauMyg')" title="Versión Lila"></button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm" onclick="addToCart('KZ Vader Flagship 3DD', 90, 'https://lh3.googleusercontent.com/aida-public/AB6AXuAK9njsbglt1sutzYx4rkSt3jl1AgqPeG5qQMGsXuUm7llx0rLyZ4O10KEF6PjLhOxvXzOgrNNOZMaYcaVDkA2NHA5d3NvExWng8I-rgONPQ2K27RdP-8udldyQRA8_s09CPUG0OrdD5hdYNP7pp-T-cVOMEayOYgk6DzZdAe7S-eOiZltgTQQ_Ds7kM09xSorSnCbmtRGmNOnLar2JIvSf0cU5o1shM3ePjMeJqLJdt35ScHaxhcJLXyS-bdGHZMom_pw')">
+                + Carrito
+              </button>
+<a class="w-full py-2 rounded-lg bg-whatsapp-green text-on-surface font-bold text-body-sm text-center shadow-sm hover:brightness-105 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20quiero%20el%20KZ%20Vader%20Flagship%20por%20S/.90" rel="noopener noreferrer" target="_blank">
+                WhatsApp
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cusco Trust & Logistics Bento Section -->
+<section class="w-full px-space-md lg:px-margin-desktop py-space-lg" id="logistica">
+<div class="max-w-7xl mx-auto space-y-space-md">
+<div class="text-left space-y-space-xs">
+<span class="font-label-badge text-label-badge text-deal-emerald font-bold tracking-wider">COMPRA SEGURA EN LA REGIÓN</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Logística Transparente y Entrega Local</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-2xl bg-surface-card/80 backdrop-blur-xl shadow-lg space-y-space-sm flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="w-12 h-12 rounded-xl bg-deal-emerald/20 flex items-center justify-center text-deal-emerald">
+<span class="material-symbols-outlined text-headline-md">moped</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Despacho Cusco Express S/. 3.00</h3>
+<p class="font-body-md text-text-muted text-body-sm">Recibe en 1 a 2 horas en Plaza San Francisco, UNSAAC, Magisterio, San Jerónimo, San Sebastián o Real Plaza. O recógelo gratis en Wanchaq.</p>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs text-deal-emerald font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-body-md">check</span>
+<span>Seguimiento por WhatsApp en directo</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-card/80 backdrop-blur-xl shadow-lg space-y-space-sm flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container/20 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-headline-md">local_shipping</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Envíos Shalom / Olva a Provincias</h3>
+<p class="font-body-md text-text-muted text-body-sm">Despachos diarios a Quillabamba, Sicuani, Espinar, Calca, Urubamba, Abancay y Puno con empaque sellado al vacío antigolpes y código de rastreo.</p>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs text-tertiary font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-body-md">inventory</span>
+<span>Embalaje de seguridad con burbujas</span>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-card/80 backdrop-blur-xl shadow-lg space-y-space-sm flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-headline-md">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Garantía Real de 6 Meses</h3>
+<p class="font-body-md text-text-muted text-body-sm">Cero riesgos. Cada caja cuenta con código de autenticidad KZ Acoustics raspable. Si tienes cualquier inconveniente de fábrica, te cambiamos el producto en Wanchaq.</p>
+</div>
+<div class="pt-space-xs flex items-center gap-space-xs text-primary font-label-badge text-label-badge font-bold">
+<span class="material-symbols-outlined text-body-md">support</span>
+<span>Soporte directo con Ulianov Cuba</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cusco Real Reviews Section -->
+<section class="w-full px-space-md lg:px-margin-desktop py-space-lg" id="resenas">
+<div class="max-w-7xl mx-auto space-y-space-md">
+<div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-label-badge text-label-badge text-tertiary font-bold tracking-wider">COMUNIDAD CUSQUEÑA</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">Opiniones de Compradores Reales</h2>
+</div>
+<button class="px-space-md py-2 rounded-xl bg-surface-container-high hover:bg-surface-bright text-tertiary font-bold text-body-sm transition-all shadow-sm flex items-center gap-space-xs" onclick="openReviewModal()">
+<span class="material-symbols-outlined text-body-md">edit</span>
+<span>Dejar mi Reseña</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md" id="reviews-container">
+<!-- Review 1 -->
+<div class="p-space-md rounded-xl bg-surface-card/80 backdrop-blur-xl shadow-md space-y-space-xs">
+<div class="flex text-amber-warning text-body-sm">
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-on-surface-variant text-body-sm">"Excelente trato de Ulianov. Me trajo los KZ Castor hasta San Jerónimo en hora y media. Los switches realmente cambian los bajos para jugar Dota 2."</p>
+<div class="pt-space-xs border-t-0">
+<span class="font-headline-md text-body-sm font-bold text-on-surface block">Piero Valdivia</span>
+<span class="font-label-badge text-body-sm text-text-muted">San Jerónimo, Cusco</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-space-md rounded-xl bg-surface-card/80 backdrop-blur-xl shadow-md space-y-space-xs">
+<div class="flex text-amber-warning text-body-sm">
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-on-surface-variant text-body-sm">"Compré el lote mayorista de S/. 849 para revender en Quillabamba y ya coloqué la mitad en menos de una semana. Todo original en empaque sellado."</p>
+<div class="pt-space-xs border-t-0">
+<span class="font-headline-md text-body-sm font-bold text-on-surface block">Brayan M. Choque</span>
+<span class="font-label-badge text-body-sm text-text-muted">Revendedor Quillabamba</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-space-md rounded-xl bg-surface-card/80 backdrop-blur-xl shadow-md space-y-space-xs">
+<div class="flex text-amber-warning text-body-sm">
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-on-surface-variant text-body-sm">"Puntos extra porque me los entregaron en la puerta de la UNSAAC entre clases. El KZ ZSN Pro 2 tiene una claridad bárbara para violín y voces."</p>
+<div class="pt-space-xs border-t-0">
+<span class="font-headline-md text-body-sm font-bold text-on-surface block">Andrea Cárdenas</span>
+<span class="font-label-badge text-body-sm text-text-muted">Estudiante UNSAAC</span>
+</div>
+</div>
+<!-- Review 4 -->
+<div class="p-space-md rounded-xl bg-surface-card/80 backdrop-blur-xl shadow-md space-y-space-xs">
+<div class="flex text-amber-warning text-body-sm">
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-on-surface-variant text-body-sm">"Pagué por Yape al recibir en Plaza San Francisco. Los probamos en el acto. La atención y asesoría técnica de VayoTech es la mejor de Cusco."</p>
+<div class="pt-space-xs border-t-0">
+<span class="font-headline-md text-body-sm font-bold text-on-surface block">Gonzalo Ramos</span>
+<span class="font-label-badge text-body-sm text-text-muted">Cusco Centro</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Slide-In Cart Drawer (Glassmorphic) -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-sm z-[90] hidden opacity-0 transition-opacity duration-300" id="cart-drawer-overlay" onclick="toggleCartDrawer(false)"></div>
+<div class="fixed top-0 right-0 h-full w-full sm:w-[440px] bg-surface-card/95 backdrop-blur-2xl z-[100] shadow-[0_0_50px_rgba(0,0,0,0.8)] transform translate-x-full transition-transform duration-300 flex flex-col justify-between" id="cart-drawer">
+<!-- Drawer Header -->
+<div class="p-space-md border-b-0 bg-surface-container-low/60 flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container">shopping_cart</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Carrito VayoTech</h3>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-badge text-label-badge font-bold" id="drawer-items-count">0</span>
+</div>
+<button class="p-1 rounded-lg bg-surface-container hover:bg-surface-bright text-on-surface" onclick="toggleCartDrawer(false)">
+<span class="material-symbols-outlined text-body-lg">close</span>
+</button>
+</div>
+<!-- Wholesale Gamified Progress -->
+<div class="px-space-md py-space-xs bg-surface-container-lowest">
+<div class="flex items-center justify-between text-body-sm pb-1">
+<span class="text-text-muted font-body-sm">Progreso Tarifa Mayorista:</span>
+<span class="font-label-badge text-label-badge text-tertiary font-bold" id="progress-text">Faltan 5 para descuento extra</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-gradient-to-r from-tertiary to-primary-container transition-all duration-300" id="wholesale-progress-bar" style="width: 0%;"></div>
+</div>
+</div>
+<!-- Cart Items Scrollable List -->
+<div class="flex-1 overflow-y-auto p-space-md space-y-space-sm" id="cart-items-container">
+<div class="py-space-xl flex flex-col items-center justify-center text-center space-y-space-xs text-text-muted" id="cart-empty-state">
+<span class="material-symbols-outlined text-headline-lg opacity-40">production_quantity_limits</span>
+<p class="font-body-md text-body-md">Tu carrito está vacío.</p>
+<p class="font-body-sm text-body-sm">Agrega audífonos KZ o aprovecha el Lote Cusco.</p>
+</div>
+</div>
+<!-- Drawer Checkout & Settings Area -->
+<div class="p-space-md bg-surface-container-low/80 space-y-space-sm border-t-0 shadow-2xl">
+<!-- Cusco Pickup Selector -->
+<div class="space-y-1">
+<label class="font-label-badge text-body-sm text-text-muted font-bold block" for="pickup-location">Punto de Entrega / Despacho:</label>
+<select class="w-full px-space-sm py-2 rounded-lg bg-surface-container text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-tertiary" id="pickup-location" onchange="updateDeliveryFee()">
+<option data-name="Plaza San Francisco (Cusco Centro)" value="3">Plaza San Francisco (Cusco Centro) • S/. 3.00</option>
+<option data-name="Real Plaza Cusco" value="3">Real Plaza Cusco • S/. 3.00</option>
+<option data-name="UNSAAC Puerta Principal" value="3">UNSAAC Puerta Principal • S/. 3.00</option>
+<option data-name="San Jerónimo / San Sebastián" value="3">San Jerónimo / San Sebastián • S/. 3.00</option>
+<option data-name="Almacén Wanchaq (Av. Huayruropata)" value="0">Recojo en Almacén Wanchaq • GRATIS</option>
+<option data-name="Envío Shalom / Olva a Provincias" value="12">Envío a Provincias (Shalom / Olva) • S/. 12.00</option>
+</select>
+</div>
+<!-- Payment Method -->
+<div class="space-y-1">
+<span class="font-label-badge text-body-sm text-text-muted font-bold block">Método de Pago Preferido:</span>
+<div class="grid grid-cols-3 gap-space-xs text-center">
+<label class="cursor-pointer">
+<input checked="" class="peer hidden" name="payment-method" type="radio" value="Yape / Plin"/>
+<div class="py-1 px-space-xs rounded bg-surface-container peer-checked:bg-secondary-container peer-checked:text-secondary-fixed font-label-badge text-body-sm font-bold transition-all">YAPE / PLIN</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer hidden" name="payment-method" type="radio" value="Efectivo Contraentrega"/>
+<div class="py-1 px-space-xs rounded bg-surface-container peer-checked:bg-primary-container peer-checked:text-on-primary-container font-label-badge text-body-sm font-bold transition-all">EFECTIVO</div>
+</label>
+<label class="cursor-pointer">
+<input class="peer hidden" name="payment-method" type="radio" value="Transferencia BCP"/>
+<div class="py-1 px-space-xs rounded bg-surface-container peer-checked:bg-tertiary-container peer-checked:text-on-tertiary-container font-label-badge text-body-sm font-bold transition-all">BCP / BBVA</div>
+</label>
+</div>
+</div>
+<!-- Totals -->
+<div class="pt-space-xs space-y-1 font-body-sm">
+<div class="flex justify-between text-text-muted">
+<span>Subtotal Productos:</span>
+<span class="font-price-integer text-on-surface font-bold" id="cart-subtotal">S/. 0.00</span>
+</div>
+<div class="flex justify-between text-text-muted">
+<span>Delivery / Envío:</span>
+<span class="font-price-integer text-deal-emerald font-bold" id="cart-delivery">S/. 3.00</span>
+</div>
+<div class="flex justify-between text-headline-md font-bold pt-1 border-t-0 text-on-surface">
+<span>Total a Pagar:</span>
+<span class="font-price-integer text-headline-md text-primary-container" id="cart-total">S/. 3.00</span>
+</div>
+</div>
+<!-- Checkout WhatsApp Button -->
+<button class="w-full py-3 rounded-xl bg-whatsapp-green hover:brightness-105 active:scale-95 text-on-surface font-headline-md text-body-md font-bold flex items-center justify-center gap-space-xs shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all" onclick="checkoutWhatsApp()">
+<span class="material-symbols-outlined text-headline-md">chat</span>
+<span>Confirmar y Pedir por WhatsApp</span>
+</button>
+</div>
+</div>
+<!-- Zoom & Detail Modal -->
+<div class="fixed inset-0 z-[120] bg-surface-container-lowest/80 backdrop-blur-md hidden flex items-center justify-center p-space-md opacity-0 transition-opacity duration-300" id="product-modal">
+<div class="relative w-full max-w-2xl bg-surface-card rounded-2xl shadow-2xl p-space-md lg:p-space-lg flex flex-col md:flex-row gap-space-md">
+<button class="absolute top-3 right-3 p-1 rounded-lg bg-surface-container hover:bg-surface-bright text-on-surface z-10" onclick="closeModal()">
+<span class="material-symbols-outlined text-body-lg">close</span>
+</button>
+<div class="w-full md:w-1/2 aspect-square rounded-xl bg-surface-container overflow-hidden flex items-center justify-center">
+<img alt="Detalle Audífono KZ" class="w-full h-full object-cover" id="modal-image" src=""/>
+</div>
+<div class="w-full md:w-1/2 flex flex-col justify-between space-y-space-sm">
+<div class="space-y-space-xs">
+<span class="font-label-badge text-label-badge text-tertiary font-bold">DETALLE TÉCNICO KZ</span>
+<h3 class="font-headline-lg text-headline-md text-on-surface font-bold" id="modal-title">Título Producto</h3>
+<span class="font-price-integer text-headline-md text-primary-container font-bold block" id="modal-price">S/. 00.00</span>
+<p class="font-body-sm text-body-sm text-text-muted leading-relaxed" id="modal-description">Descripción</p>
+</div>
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs text-deal-emerald font-body-sm">
+<span class="material-symbols-outlined text-body-sm">verified</span>
+<span>Garantía de 6 meses contra defectos</span>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-primary-container hover:bg-primary-container/90 text-on-primary font-bold text-body-sm shadow transition-all" id="modal-add-btn">
+            Añadir a mi Carrito
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Customer Review Submission Modal -->
+<div class="fixed inset-0 z-[120] bg-surface-container-lowest/80 backdrop-blur-md hidden flex items-center justify-center p-space-md opacity-0 transition-opacity duration-300" id="review-modal">
+<div class="relative w-full max-w-md bg-surface-card rounded-2xl shadow-2xl p-space-md lg:p-space-lg space-y-space-sm">
+<button class="absolute top-3 right-3 p-1 rounded-lg bg-surface-container hover:bg-surface-bright text-on-surface" onclick="closeReviewModal()">
+<span class="material-symbols-outlined text-body-lg">close</span>
+</button>
+<div class="space-y-1">
+<span class="font-label-badge text-label-badge text-deal-emerald font-bold">CLIENTE CUSCO</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Comparte tu Experiencia Hi-Fi</h3>
+<p class="font-body-sm text-body-sm text-text-muted">Tu reseña aparecerá en vivo en la tienda para la comunidad.</p>
+</div>
+<div class="space-y-space-xs">
+<div>
+<label class="font-label-badge text-body-sm text-text-muted block">Tu Nombre y Apellido:</label>
+<input class="w-full px-space-sm py-2 rounded-lg bg-surface-container text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-tertiary" id="review-name" placeholder="Ej. Sebastián Palomino" type="text"/>
+</div>
+<div>
+<label class="font-label-badge text-body-sm text-text-muted block">Zona de Cusco / Provincia:</label>
+<input class="w-full px-space-sm py-2 rounded-lg bg-surface-container text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-tertiary" id="review-zone" placeholder="Ej. Magisterio, Cusco" type="text"/>
+</div>
+<div>
+<label class="font-label-badge text-body-sm text-text-muted block">Tu Opinión sobre los audífonos:</label>
+<textarea class="w-full px-space-sm py-2 rounded-lg bg-surface-container text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-tertiary" id="review-comment" placeholder="Calidad de sonido, entrega, atención..." rows="3"></textarea>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-xl bg-deal-emerald hover:brightness-105 text-on-surface font-headline-md text-body-sm font-bold shadow transition-all" onclick="submitReview()">
+        Publicar Reseña Inmediata
       </button>
-    </nav>
-  </header>
+</div>
+</div>
+</div>
+<script>
+  // State Store
+  const state = {
+    cart: [
+      { name: 'KZ Castor Harman con Switches', price: 65, qty: 1, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBCFyAomr-ihaSPDLUNggdIv8KceC0PmCd6yzJSklQzpTh0vf55b5EoVhqsdWJ3dD0rrzEbsWlcb9M_gjkgxxmM63vAs5B8GIKpUVZ2W1-B9U-V-ahydheuWkECwbQQPWOZWv9qu-_DuGZ4JWvd7pmzS6mwN1HUb-XQkVHAHrnLcK4DsewnclTq8UZZdF9AERrwRwxemdc4LIr-vqs6_blGzWQ2r7klEX0rR6UO67PddMgNmdYtLikk3c8jNOraQc1PDu8' },
+      { name: 'KZ ZSN Pro 2 Híbrido', price: 75, qty: 1, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBTOblfSPn-aZ2GCYefzHw-hpphrlzoY_F0GeYz5mn4Pi9JB3Xn4vrLlS35wrC5KO4UsE315YEvVKmDlrExgQyqsPssi2kcAXkM4BEzAVXlAmslebcoZohdoOOXuePQMunhZlzcijZVODLDeu15dm4Bw1RGHfxePeLuvYdKOe1GGaHZBEE8wdyR_1okUJZ9k0dGcEfz2H91Cc7pAtNdfHYstQH0l-Wc_zxAOgExXbeTB6YF4WgAokp2edXJTDlPtbz8g-E' },
+      { name: 'KZ EDX Pro', price: 39, qty: 1, image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAe4NQS-z67wPPSWXyTTzk3j0Qtq0wcRed3q4rxRMtjbpDi_QxNsBGSpKqHNhLZtL8AGC8xcSstomH-v2hP8xrfQ3-UlA7HT4qGVAGM73wfdLDThWvmmFRugdhnpBvUUBabya2ThYkGi04sHdcc0AqKFE-jp3sRUsCO-QzZPlRqFJV37F0iQhkoth86SfHjU3-lERp8xZt95fLJDEatF7oFwxcxZrnx-K1NN_jyTpTnJKsd1gkmcazUPkOSt_PDL2O8i2g' }
+    ],
+    deliveryFee: 3,
+    deliveryPoint: 'Plaza San Francisco (Cusco Centro)',
+    currentModalItem: null
+  };
 
-  <main id="inicio">
-    <!-- Hero Showcase Section -->
-    <section class="hero wrap">
-      <div class="hero-copy">
-        <div class="overline"><i></i> VAYOTECH CUSCO · AUDIO KZ HI-FI</div>
-        <h1>Tu música y juegos merecen <em>sonar al máximo nivel.</em></h1>
-        <p>Monitores in-ear de estudio, módulos inalámbricos Bluetooth y accesorios originales KZ con garantía. Elige entre nuestro <strong>stock disponible hoy mismo en Cusco</strong> o explora nuestro <strong>catálogo completo</strong>.</p>
-        
-        <div class="hero-actions">
-          <button class="button primary" type="button" data-jump-tab="stock">
-            ⚡ Ver Stock Inmediato (20 unids) <span aria-hidden="true">→</span>
-          </button>
-          <button class="button subtle" type="button" data-jump-tab="catalog">
-            📖 Ver Catálogo Completo (21 modelos)
-          </button>
+  // Live Ticker Rotator
+  const orderTicker = [
+    '⚡ Piero en San Jerónimo acaba de reservar 1x KZ Castor Pro',
+    '🔥 Carlos en Real Plaza compró 1x KZ ZSN Pro 2',
+    '🚚 Despacho a Quillabamba en camino vía Shalom',
+    '🎧 Gonzalo en Plaza San Francisco recogió KZ Castor Harman',
+    '📦 Almacén Wanchaq: Quedan solo 2x KZ Gale Metal'
+  ];
+  let tickerIndex = 0;
+  setInterval(() => {
+    tickerIndex = (tickerIndex + 1) % orderTicker.length;
+    const el = document.getElementById('live-order-text');
+    if (el) {
+      el.textContent = orderTicker[tickerIndex];
+    }
+  }, 4500);
+
+  // 48-Hour Realistic Countdown
+  let remainingSeconds = (1 * 86400) + (18 * 3600) + (42 * 60) + 59;
+  function updateTimer() {
+    if (remainingSeconds <= 0) return;
+    remainingSeconds--;
+
+    const days = Math.floor(remainingSeconds / 86400);
+    const hours = Math.floor((remainingSeconds % 86400) / 3600);
+    const minutes = Math.floor((remainingSeconds % 3600) / 60);
+    const seconds = remainingSeconds % 60;
+
+    const dEl = document.getElementById('timer-days');
+    const hEl = document.getElementById('timer-hours');
+    const mEl = document.getElementById('timer-minutes');
+    const sEl = document.getElementById('timer-seconds');
+
+    if (dEl) dEl.textContent = String(days).padStart(2, '0');
+    if (hEl) hEl.textContent = String(hours).padStart(2, '0');
+    if (mEl) mEl.textContent = String(minutes).padStart(2, '0');
+    if (sEl) sEl.textContent = String(seconds).padStart(2, '0');
+  }
+  setInterval(updateTimer, 1000);
+
+  // Cart Management
+  function renderCart() {
+    const container = document.getElementById('cart-items-container');
+    const emptyState = document.getElementById('cart-empty-state');
+    const countBadge = document.getElementById('drawer-items-count');
+    const subtotalEl = document.getElementById('cart-subtotal');
+    const totalEl = document.getElementById('cart-total');
+    const progressBar = document.getElementById('wholesale-progress-bar');
+    const progressText = document.getElementById('progress-text');
+
+    if (!container) return;
+
+    // Filter empty
+    if (state.cart.length === 0) {
+      container.innerHTML = '';
+      if (emptyState) container.appendChild(emptyState);
+      if (countBadge) countBadge.textContent = '0';
+      if (subtotalEl) subtotalEl.textContent = 'S/. 0.00';
+      if (totalEl) totalEl.textContent = `S/. ${state.deliveryFee.toFixed(2)}`;
+      if (progressBar) progressBar.style.width = '0%';
+      if (progressText) progressText.textContent = 'Agrega 5 audífonos para descuento mayorista';
+      const headerBadge = document.getElementById('header-cart-badge');
+      const headerTotal = document.getElementById('header-cart-total');
+      if (headerBadge) headerBadge.textContent = '0';
+      if (headerTotal) headerTotal.textContent = 'S/. 0.00';
+      return;
+    }
+
+    let subtotal = 0;
+    let totalItems = 0;
+    container.innerHTML = '';
+
+    state.cart.forEach((item, index) => {
+      subtotal += item.price * item.qty;
+      totalItems += item.qty;
+
+      const itemCard = document.createElement('div');
+      itemCard.className = 'flex items-center gap-space-sm p-space-xs rounded-xl bg-surface-container/60';
+      itemCard.innerHTML = `
+        <img src="${item.image}" alt="${item.name}" class="w-14 h-14 rounded-lg object-cover bg-surface-container">
+        <div class="flex-1 min-w-0">
+          <h4 class="font-headline-md text-body-sm font-bold text-on-surface truncate">${item.name}</h4>
+          <span class="font-price-integer text-body-sm text-primary-container font-bold">S/. ${(item.price * item.qty).toFixed(2)}</span>
+          <span class="text-body-sm text-text-muted block text-[11px]">S/. ${item.price.toFixed(2)} c/u</span>
         </div>
-
-        <div class="hero-facts">
-          <span><b>20</b> unidades en stock</span>
-          <span><b>7</b> modelos entrega inmediata</span>
-          <span><b>21</b> modelos en catálogo</span>
-          <span><b>Cusco</b> y todo el Perú</span>
+        <div class="flex items-center gap-1 bg-surface-container-high px-1 py-0.5 rounded-lg">
+          <button onclick="updateQty(${index}, -1)" class="w-6 h-6 flex items-center justify-center rounded text-on-surface hover:bg-surface-bright font-bold">-</button>
+          <span class="font-label-badge text-body-sm text-on-surface px-1 font-bold">${item.qty}</span>
+          <button onclick="updateQty(${index}, 1)" class="w-6 h-6 flex items-center justify-center rounded text-on-surface hover:bg-surface-bright font-bold">+</button>
         </div>
-      </div>
+        <button onclick="removeItem(${index})" class="p-1 text-text-muted hover:text-error transition-colors">
+          <span class="material-symbols-outlined text-body-md">delete</span>
+        </button>
+      `;
+      container.appendChild(itemCard);
+    });
 
-      <div class="hero-visual">
-        <div class="visual-glow"></div>
-        <div class="visual-ring"></div>
-        <img src="images/kz_edx_pro.jpg" alt="Audífonos KZ EDX Pro disponibles en VayoTech Cusco" fetchpriority="high">
-        <div class="hero-sticker">
-          <span>BEST SELLER CUSCO</span>
-          <strong>KZ EDX Pro</strong>
-          <small>S/ 39.00 · 5 unidades en stock</small>
+    if (countBadge) countBadge.textContent = String(totalItems);
+    if (subtotalEl) subtotalEl.textContent = `S/. ${subtotal.toFixed(2)}`;
+    if (totalEl) totalEl.textContent = `S/. ${(subtotal + state.deliveryFee).toFixed(2)}`;
+
+    const headerBadge = document.getElementById('header-cart-badge');
+    const headerTotal = document.getElementById('header-cart-total');
+    if (headerBadge) headerBadge.textContent = String(totalItems);
+    if (headerTotal) headerTotal.textContent = `S/. ${subtotal.toFixed(2)}`;
+
+    // Wholesale threshold meter (target: 5 items)
+    if (progressBar && progressText) {
+      const pct = Math.min(100, (totalItems / 5) * 100);
+      progressBar.style.width = pct + '%';
+      if (totalItems >= 5) {
+        progressText.textContent = '🎉 ¡Tarifa Mayorista Activada!';
+      } else {
+        progressText.textContent = `Faltan ${5 - totalItems} audífonos para precio mayorista`;
+      }
+    }
+  }
+
+  function updateQty(index, delta) {
+    if (state.cart[index]) {
+      state.cart[index].qty += delta;
+      if (state.cart[index].qty <= 0) {
+        state.cart.splice(index, 1);
+      }
+      renderCart();
+    }
+  }
+
+  function removeItem(index) {
+    state.cart.splice(index, 1);
+    renderCart();
+  }
+
+  function addToCart(name, price, image) {
+    const existing = state.cart.find(i => i.name === name);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      state.cart.push({ name, price, qty: 1, image });
+    }
+    renderCart();
+    toggleCartDrawer(true);
+  }
+
+  function addBundleToCart(bundleName, bundlePrice) {
+    addToCart(bundleName, bundlePrice, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBUD5KsYIB44WiuJn8qqC2fwlp2vK5IFNCNMfXgrX4-ubrmOXnRG1GiAsdWOUsBZTwWJ0WRI9gP07wkh0L-JK0Hf1rlDUqHCKF2xl3OIJZwp_W6sV1QDbje24iTil9Kwt4swtw-DSP3TdLX3agIZJmHqj96vdrSf_G36JEwVaLT5PH4IZY7hR3sVCqjUlCw-HdATpzgDxrs3r18OcAvS4GgkM-FhVFqdjS9QysP8alFxE1xVjytDOQBAEgtB2qhdxI4apY');
+  }
+
+  function addLotToCart() {
+    addToCart('LOTE MAESTRO CUSCO (34 unidades KZ)', 849, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBUD5KsYIB44WiuJn8qqC2fwlp2vK5IFNCNMfXgrX4-ubrmOXnRG1GiAsdWOUsBZTwWJ0WRI9gP07wkh0L-JK0Hf1rlDUqHCKF2xl3OIJZwp_W6sV1QDbje24iTil9Kwt4swtw-DSP3TdLX3agIZJmHqj96vdrSf_G36JEwVaLT5PH4IZY7hR3sVCqjUlCw-HdATpzgDxrs3r18OcAvS4GgkM-FhVFqdjS9QysP8alFxE1xVjytDOQBAEgtB2qhdxI4apY');
+  }
+
+  function toggleCartDrawer(open) {
+    const drawer = document.getElementById('cart-drawer');
+    const overlay = document.getElementById('cart-drawer-overlay');
+    if (!drawer || !overlay) return;
+
+    if (open) {
+      overlay.classList.remove('hidden');
+      setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+      drawer.classList.remove('translate-x-full');
+    } else {
+      overlay.classList.add('opacity-0');
+      drawer.classList.add('translate-x-full');
+      setTimeout(() => overlay.classList.add('hidden'), 300);
+    }
+  }
+
+  function updateDeliveryFee() {
+    const select = document.getElementById('pickup-location');
+    if (!select) return;
+    const fee = parseFloat(select.value);
+    state.deliveryFee = fee;
+    state.deliveryPoint = select.options[select.selectedIndex].getAttribute('data-name');
+    renderCart();
+  }
+
+  function switchImage(imgId, newSrc) {
+    const img = document.getElementById(imgId);
+    if (img) {
+      img.src = newSrc;
+    }
+  }
+
+  // Interactive Sound Profile Guide
+  function setAcousticMode(mode) {
+    const btnGamer = document.getElementById('btn-mode-gamer');
+    const btnAudio = document.getElementById('btn-mode-audiophile');
+    const titleDriver = document.getElementById('guide-driver-title');
+    const descDriver = document.getElementById('guide-driver-desc');
+    const titleModels = document.getElementById('guide-models-title');
+    const descModels = document.getElementById('guide-models-desc');
+    const actionBtn = document.getElementById('guide-action-btn');
+
+    if (mode === 'gamer') {
+      btnGamer.className = 'px-space-md py-2 rounded-lg font-headline-md text-body-sm font-bold bg-primary-container text-on-primary-container transition-all';
+      btnAudio.className = 'px-space-md py-2 rounded-lg font-headline-md text-body-sm font-bold text-text-muted hover:text-on-surface transition-all';
+
+      titleDriver.textContent = 'Driver Dinámico Magnético Dual (DD)';
+      descDriver.textContent = 'Enfocado en subgraves viscerales y micro-detalles direccionales. Localiza recargas, pasos detrás de muros y explosiones en CS2, Valorant y Warzone.';
+      titleModels.textContent = 'KZ EDX Pro, EDX Lite & Castor Bass';
+      descModels.textContent = 'Rangos desde S/. 30 hasta S/. 65. Micrófono HD sin latencia para Discord y Teamspeak.';
+      actionBtn.innerHTML = '<span>Filtrar Modelos Gamer</span><span class="material-symbols-outlined text-body-sm">arrow_forward</span>';
+      actionBtn.onclick = () => filterFromGuide('gamer');
+    } else {
+      btnAudio.className = 'px-space-md py-2 rounded-lg font-headline-md text-body-sm font-bold bg-secondary-container text-secondary-fixed transition-all';
+      btnGamer.className = 'px-space-md py-2 rounded-lg font-headline-md text-body-sm font-bold text-text-muted hover:text-on-surface transition-all';
+
+      titleDriver.textContent = 'Configuración Híbrida (DD + Balanced Armature)';
+      descDriver.textContent = 'El driver dinámico maneja bajos redondos mientras la armadura balanceada 30095 extrae el aire en voces, cuerdas de guitarra y platillos sin sibilancia.';
+      titleModels.textContent = 'KZ ZSN Pro 2, Castor Pro & Vader 3DD';
+      descModels.textContent = 'Rangos desde S/. 75 hasta S/. 90. Diseñado para monitoreo en vivo de vocalistas, guitarristas y audiófilos.';
+      actionBtn.innerHTML = '<span>Filtrar Modelos Hi-Fi & Flagship</span><span class="material-symbols-outlined text-body-sm">arrow_forward</span>';
+      actionBtn.onclick = () => filterFromGuide('flagship');
+    }
+  }
+
+  function filterFromGuide(category) {
+    const buttons = document.querySelectorAll('.catalog-filter-btn');
+    buttons.forEach(b => {
+      if (category === 'gamer' && b.textContent.includes('Gamer')) {
+        filterCategory('gamer', b);
+      } else if (category === 'flagship' && b.textContent.includes('Flagship')) {
+        filterCategory('flagship', b);
+      }
+    });
+    const catalog = document.getElementById('catalogo');
+    if (catalog) catalog.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // Filter and Search
+  function filterCategory(cat, btn) {
+    document.querySelectorAll('.catalog-filter-btn').forEach(b => {
+      b.className = 'catalog-filter-btn px-space-md py-1.5 rounded-lg font-headline-md text-body-sm font-bold bg-surface-container text-text-muted hover:text-on-surface whitespace-nowrap transition-all';
+    });
+    btn.className = 'catalog-filter-btn px-space-md py-1.5 rounded-lg font-headline-md text-body-sm font-bold bg-primary-container text-on-primary-container whitespace-nowrap shadow-sm';
+
+    const cards = document.querySelectorAll('.product-card');
+    cards.forEach(card => {
+      const cardCat = card.getAttribute('data-category');
+      if (cat === 'all' || cardCat === cat) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  function handleSearch(query) {
+    const q = query.toLowerCase().trim();
+    const cards = document.querySelectorAll('.product-card');
+    cards.forEach(card => {
+      const name = card.getAttribute('data-name').toLowerCase();
+      if (name.includes(q)) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  // Modal Detail Logic
+  function openModal(title, images, price, desc) {
+    const modal = document.getElementById('product-modal');
+    const modalImg = document.getElementById('modal-image');
+    const modalTitle = document.getElementById('modal-title');
+    const modalPrice = document.getElementById('modal-price');
+    const modalDesc = document.getElementById('modal-description');
+    const addBtn = document.getElementById('modal-add-btn');
+
+    if (!modal) return;
+
+    modalImg.src = images[0];
+    modalTitle.textContent = title;
+    modalPrice.textContent = price;
+    modalDesc.textContent = desc;
+
+    addBtn.onclick = () => {
+      const numericPrice = parseFloat(price.replace('S/.', '').trim());
+      addToCart(title, numericPrice, images[0]);
+      closeModal();
+    };
+
+    modal.classList.remove('hidden');
+    setTimeout(() => modal.classList.remove('opacity-0'), 10);
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('product-modal');
+    if (!modal) return;
+    modal.classList.add('opacity-0');
+    setTimeout(() => modal.classList.add('hidden'), 300);
+  }
+
+  // Review Modal Logic
+  function openReviewModal() {
+    const modal = document.getElementById('review-modal');
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    setTimeout(() => modal.classList.remove('opacity-0'), 10);
+  }
+
+  function closeReviewModal() {
+    const modal = document.getElementById('review-modal');
+    if (!modal) return;
+    modal.classList.add('opacity-0');
+    setTimeout(() => modal.classList.add('hidden'), 300);
+  }
+
+  function submitReview() {
+    const name = document.getElementById('review-name').value.trim();
+    const zone = document.getElementById('review-zone').value.trim();
+    const comment = document.getElementById('review-comment').value.trim();
+    const container = document.getElementById('reviews-container');
+
+    if (!name || !comment) {
+      alert('Por favor escribe tu nombre y una breve opinión.');
+      return;
+    }
+
+    if (container) {
+      const card = document.createElement('div');
+      card.className = 'p-space-md rounded-xl bg-surface-card/90 backdrop-blur-xl shadow-lg space-y-space-xs border-deal-emerald/40 animate-fade-in';
+      card.innerHTML = `
+        <div class="flex text-amber-warning text-body-sm">
+          <span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-body-md" style="font-variation-settings: 'FILL' 1;">star</span>
         </div>
-      </div>
-    </section>
-
-    <!-- Shopping Process Steps -->
-    <section class="benefits wrap" aria-label="Cómo comprar en VayoTech">
-      <div>
-        <span class="benefit-icon">01</span>
-        <strong>1. Elige tu modelo</strong>
-        <small>Revisa fotos reales, características técnicas y precios oficiales.</small>
-      </div>
-      <div>
-        <span class="benefit-icon">02</span>
-        <strong>2. Arma tu pedido</strong>
-        <small>Añade los productos al carrito con stock garantizado en tiempo real.</small>
-      </div>
-      <div>
-        <span class="benefit-icon">03</span>
-        <strong>3. Entrega coordinada</strong>
-        <small>Coordinamos punto de entrega en Cusco o envío seguro por WhatsApp.</small>
-      </div>
-    </section>
-
-    <!-- Sale & Urgency Banner -->
-    <section class="sale wrap">
-      <div>
-        <span class="sale-label">DISPONIBILIDAD EN TIEMPO REAL · CUSCO</span>
-        <h2>Stock Físico Listo Para Entrega Inmediata</h2>
-        <p>Unidades registradas en nuestro inventario local en Cusco. Puedes solicitar entrega presencial hoy mismo o envío a cualquier provincia.</p>
-      </div>
-      <div class="sale-count">
-        <span>Tiempo restante de despacho hoy</span>
-        <strong id="countdown">--:--:--</strong>
-        <small>Atención continua personalizada por WhatsApp</small>
-      </div>
-    </section>
-
-    <!-- Store Section with Tabs -->
-    <section class="shop wrap" id="disponibles">
-      
-      <!-- Primary Tab Switcher -->
-      <div class="view-tabs-container">
-        <div class="view-tabs" role="tablist" aria-label="Pestañas de productos">
-          <button class="view-tab active" data-tab="stock" role="tab" aria-selected="true" id="tab-stock">
-            <span class="tab-icon">⚡</span>
-            <span class="tab-text">Stock Disponible Ahora</span>
-            <span class="tab-badge" id="tabStockBadge">20 unidades</span>
-          </button>
-          <button class="view-tab" data-tab="catalog" role="tab" aria-selected="false" id="tab-catalog">
-            <span class="tab-icon">📖</span>
-            <span class="tab-text">Catálogo Completo</span>
-            <span class="tab-badge" id="tabCatalogBadge">21 modelos</span>
-          </button>
-          <button class="view-tab" data-tab="all" role="tab" aria-selected="false" id="tab-all">
-            <span class="tab-icon">✨</span>
-            <span class="tab-text">Ver Todo</span>
-          </button>
+        <p class="font-body-sm text-on-surface-variant text-body-sm">"${comment}"</p>
+        <div class="pt-space-xs">
+          <span class="font-headline-md text-body-sm font-bold text-on-surface block">${name}</span>
+          <span class="font-label-badge text-body-sm text-deal-emerald">${zone || 'Cusco'} • Verificado</span>
         </div>
-      </div>
+      `;
+      container.prepend(card);
+    }
 
-      <!-- Section Title (Dynamic according to active tab) -->
-      <div class="section-head">
-        <div>
-          <span class="kicker">EXPLORA NUESTRO STOCK Y CATÁLOGO</span>
-          <h2 id="shopSectionTitle">Stock Disponible para <em>Entrega Inmediata</em></h2>
-          <p id="shopSectionDesc">7 productos con stock físico en Cusco (20 unidades totales). Entrega hoy mismo en Cusco o envíos rápidos a todo el Perú.</p>
-        </div>
-      </div>
+    closeReviewModal();
+    alert('¡Gracias por tu reseña! Ya está visible en VayoTech Cusco.');
+  }
 
-      <!-- Filters & Tools Bar -->
-      <div class="shop-tools">
-        <label class="searchbox">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16.5 16.5 4 4"/></svg>
-          <input id="search" type="search" placeholder="Buscar por modelo (ej. EDX Pro, Castor, Cable Silver, Estuche...)" aria-label="Buscar en stock o catálogo">
-        </label>
+  // Final WhatsApp Order Compilation
+  function checkoutWhatsApp() {
+    if (state.cart.length === 0) {
+      alert('Tu carrito está vacío. Agrega al menos un modelo KZ.');
+      return;
+    }
 
-        <div class="filters" aria-label="Filtrar por categoría">
-          <button class="filter active" data-filter="all" type="button">Todos</button>
-          <button class="filter" data-filter="audifonos" type="button">Audífonos In-Ear</button>
-          <button class="filter" data-filter="tws" type="button">Bluetooth TWS</button>
-          <button class="filter" data-filter="cables" type="button">Cables & Repuestos</button>
-          <button class="filter" data-filter="accesorios" type="button">Adaptadores & Estuches</button>
-        </div>
+    let subtotal = 0;
+    let lines = state.cart.map(i => {
+      const lineCost = i.price * i.qty;
+      subtotal += lineCost;
+      return `• ${i.qty}x ${i.name} = S/. ${lineCost.toFixed(2)}`;
+    }).join('\n');
 
-        <label class="sort-label">
-          Ordenar:
-          <select id="sort" aria-label="Ordenar productos">
-            <option value="featured">Destacados / Stock</option>
-            <option value="low">Menor precio</option>
-            <option value="high">Mayor precio</option>
-            <option value="stock">Mayor disponibilidad</option>
-          </select>
-        </label>
-      </div>
+    const total = subtotal + state.deliveryFee;
+    const paymentMethodEl = document.querySelector('input[name="payment-method"]:checked');
+    const payment = paymentMethodEl ? paymentMethodEl.value : 'Yape';
 
-      <!-- Results Feedback -->
-      <p id="resultCount" class="results" aria-live="polite">Cargando productos...</p>
+    const msg = `👋 *¡Hola Ulianov! Vengo de la tienda VayoTech Cusco 2026*\n\n` +
+      `*DETALLE DE MI PEDIDO KZ:*\n${lines}\n\n` +
+      `📦 *Lugar de Entrega:* ${state.deliveryPoint} (S/. ${state.deliveryFee.toFixed(2)})\n` +
+      `💵 *Método de Pago:* ${payment}\n` +
+      `🏷️ *TOTAL A PAGAR: S/. ${total.toFixed(2)}*\n\n` +
+      `¿Tienen stock disponible para coordinar la entrega hoy mismo?`;
 
-      <!-- Dynamic Product Grid -->
-      <div class="product-grid" id="productGrid"></div>
-    </section>
+    const encoded = encodeURIComponent(msg);
+    window.open(`https://wa.me/51933685462?text=${encoded}`, '_blank');
+  }
 
-    <!-- Delivery & Shipping Section -->
-    <section class="delivery wrap" id="entregas">
-      <div>
-        <span class="kicker">PROCESO TRANSPARENTE Y RÁPIDO</span>
-        <h2>Entregas en Cusco y Envíos a Todo el Perú</h2>
-        <p>En la ciudad de Cusco coordinamos la entrega personal o por delivery a tu domicilio / trabajo. Para envíos a nivel nacional trabajamos con Olva Courier y Shalom con número de seguimiento inmediato.</p>
-        <a class="button whatsapp" href="https://wa.me/51933685462?text=Hola%20VayoTech%2C%20quiero%20hacer%20una%20consulta%20sobre%20entregas%20y%20productos." target="_blank" rel="noopener">
-          Consultar por WhatsApp ↗
-        </a>
-      </div>
-
-      <div class="delivery-box">
-        <div>
-          <span>01</span>
-          <p>
-            <b>Cusco Capital & Alrededores</b>
-            <small>Entrega hoy mismo. Coordinamos punto céntrico o delivery express.</small>
-          </p>
-        </div>
-        <div>
-          <span>02</span>
-          <p>
-            <b>Provincias de Cusco & Todo el Perú</b>
-            <small>Envíos diarios por Shalom u Olva Courier con código de rastreo.</small>
-          </p>
-        </div>
-        <div>
-          <span>03</span>
-          <p>
-            <b>Garantía & Asesoría Personal</b>
-            <small>Te asesoramos a elegir el modelo que mejor se adapte a tus gustos musicales o juegos.</small>
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="wrap footer-inner">
-      <div class="footer-brand">
-        <strong>VAYO<span>TECH</span> CUSCO</strong>
-        <p>Tu tienda especializada en audio Hi-Fi, monitores in-ear y accesorios KZ en Cusco, Perú.</p>
-      </div>
-      <p>Todos los precios están expresados en Soles peruanos (S/.). Stock en tiempo real sujeto a confirmación final por WhatsApp.</p>
-      <a href="https://wa.me/51933685462" target="_blank" rel="noopener">
-        WhatsApp Oficial: +51 933 685 462 ↗
-      </a>
-    </div>
-  </footer>
-
-  <!-- Shopping Cart Drawer -->
-  <div class="scrim" id="scrim" hidden></div>
-  <aside class="drawer" id="drawer" aria-label="Carrito de compras" aria-modal="true" role="dialog" hidden>
-    <div class="drawer-head">
-      <div>
-        <span class="kicker">TU PEDIDO</span>
-        <h2>Mi Carrito (<span id="drawerCount">0</span>)</h2>
-      </div>
-      <button class="close" id="closeCart" type="button" aria-label="Cerrar carrito">×</button>
-    </div>
-
-    <div class="drawer-scroll">
-      <div id="cartItems"></div>
-
-      <div id="checkout" hidden>
-        <div class="total">
-          <span>Subtotal de productos:</span>
-          <strong id="subtotal">S/ 0.00</strong>
-        </div>
-        <p class="total-note">El delivery en Cusco (S/ 3 - 5) o envío nacional se confirma directamente al chatear.</p>
-
-        <h3>Datos para coordinar tu entrega</h3>
-        <form id="orderForm">
-          <label>
-            Tu nombre completo:
-            <input id="customer" name="customer" autocomplete="name" required placeholder="Ej. Juan Pérez">
-          </label>
-          <label>
-            Teléfono de contacto / WhatsApp:
-            <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="Ej. 987 654 321">
-          </label>
-          <label>
-            Tipo de entrega:
-            <select id="delivery" name="delivery">
-              <option value="Entrega en Cusco (Punto Céntrico / Delivery)">Entrega en Cusco (Punto Céntrico / Delivery)</option>
-              <option value="Envío Nacional (Shalom / Olva)">Envío Nacional (Shalom / Olva)</option>
-            </select>
-          </label>
-          <label>
-            Dirección en Cusco o Ciudad / Agencia nacional:
-            <textarea id="destination" name="destination" required rows="2" placeholder="Ej. San Sebastián, Cusco / Arequipa - Agencia Shalom"></textarea>
-          </label>
-          <button class="button primary checkout-button" type="submit">
-            Continuar por WhatsApp <span aria-hidden="true">↗</span>
-          </button>
-          <p class="privacy-note">Se abrirá WhatsApp con el resumen de tu pedido armado y listo para enviar en un clic.</p>
-        </form>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Product Details Modal Backdrop -->
-  <div class="modal-backdrop" id="modalBackdrop" hidden>
-    <div class="modal" role="dialog" aria-modal="true" aria-label="Detalle técnico de producto">
-      <button class="close modal-close" id="closeModal" type="button" aria-label="Cerrar detalle">×</button>
-      <div id="modalContent"></div>
-    </div>
-  </div>
-
-  <!-- Notification Toast -->
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <!-- Floating Help Button -->
-  <a class="help" href="https://wa.me/51933685462?text=Hola%20VayoTech%20Cusco%2C%20necesito%20asesor%C3%ADa%20para%20elegir%20el%20mejor%20aud%C3%ADfono%20KZ." target="_blank" rel="noopener" aria-label="Hablar con VayoTech por WhatsApp">
-    <span>¿Necesitas asesoría?</span>
-    <b>WhatsApp Oficial ↗</b>
-  </a>
-
-</body>
-</html>
+  // Hook global shell button if exists
+  document.addEventListener('DOMContentLoaded', () => {
+    renderCart();
+    const shellCartBtn = document.querySelector('header button');
+    if (shellCartBtn) {
+      shellCartBtn.addEventListener('click', () => toggleCartDrawer(true));
+    }
+  });
+</script></main><footer class="relative z-10 w-full bg-surface-card/90 backdrop-blur-2xl mt-space-xl shadow-[0_-1px_15px_rgba(0,0,0,0.5)]"><div class="max-w-7xl mx-auto px-space-md lg:px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg mb-space-xl"><div class="space-y-space-sm"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md font-bold text-on-surface">VAYOTECH</span><span class="font-headline-md text-headline-md font-bold text-primary-container">CUSCO</span></div><p class="font-body-md text-body-md text-text-muted">Hub especializado de importación directa KZ Acoustics, audífonos IEMs Hi-Fi, DACs y accesorios gamer en la Región Cusco.</p><div class="flex items-center gap-space-xs pt-space-xs"><span class="font-label-badge text-label-badge bg-surface-container px-space-xs py-1 rounded text-deal-emerald font-bold">GARANTÍA LOCAL 6M</span><span class="font-label-badge text-label-badge bg-surface-container px-space-xs py-1 rounded text-tertiary font-bold">BOLETA ELECTRÓNICA</span></div></div><div class="space-y-space-sm"><h4 class="font-headline-md text-body-lg font-bold text-primary">Puntos de Entrega Inmediata</h4><ul class="space-y-space-xs font-body-sm text-body-sm text-text-muted"><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-body-md">location_on</span><span>Wanchaq: Av. Huayruropata (Almacén Central)</span></li><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-body-md">location_on</span><span>Cusco Centro: Plaza San Francisco &amp; Espinar</span></li><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-body-md">location_on</span><span>San Sebastián: Real Plaza Cusco Pick-Up</span></li><li class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-deal-emerald text-body-md">local_shipping</span><span>Envíos Olva / Shalom a Provincias y Valle Sagrado</span></li></ul></div><div class="space-y-space-sm"><h4 class="font-headline-md text-body-lg font-bold text-tertiary">Métodos de Pago Seguros</h4><p class="font-body-sm text-body-sm text-text-muted">Confirmación inmediata al recoger tu producto o por delivery:</p><div class="flex flex-wrap gap-space-xs pt-space-xs"><span class="px-space-sm py-1 rounded bg-secondary-container text-secondary font-label-badge text-label-badge font-bold">YAPE CUSCO</span><span class="px-space-sm py-1 rounded bg-tertiary-container text-on-surface font-label-badge text-label-badge font-bold">PLIN</span><span class="px-space-sm py-1 rounded bg-surface-container-high text-deal-emerald font-label-badge text-label-badge font-bold">CONTRA-ENTREGA CASH</span><span class="px-space-sm py-1 rounded bg-surface-container-high text-primary font-label-badge text-label-badge font-bold">BCP / INTERBANK</span></div></div><div class="space-y-space-sm"><h4 class="font-headline-md text-body-lg font-bold text-secondary">Atención y Soporte Hi-Fi</h4><p class="font-body-sm text-body-sm text-text-muted">Asesoría técnica para ecualización KZ y cables de plata:</p><div class="space-y-space-xs font-body-sm text-body-sm"><div class="text-on-surface font-bold">Atención: Ulianov Cuba</div><div class="text-deal-emerald font-label-badge text-label-badge">WhatsApp Activo 24/7: +51 933 685 462</div><div class="text-text-muted">Lunes a Domingo: 8:30 AM - 9:30 PM</div></div></div></div><div class="pt-space-lg bg-surface-container-low/40 rounded-xl px-space-md flex flex-col md:flex-row items-center justify-between gap-space-md text-body-sm text-text-muted"><div class="font-label-badge text-label-badge">© 2026 VayoTech Cusco. Liquidación Oficial KZ IEMs &amp; Audio Hi-Fi Perú.</div><div class="flex items-center gap-space-md"><span class="hover:text-primary transition-colors cursor-pointer">Términos de Liquidación</span><span class="hover:text-primary transition-colors cursor-pointer">Garantía de Audio</span><span class="hover:text-primary transition-colors cursor-pointer">Libro de Reclamaciones</span></div></div></div></footer><div class="fixed bottom-6 right-6 z-50"><a class="flex items-center gap-space-xs bg-whatsapp-green text-on-surface px-space-md py-space-sm rounded-full shadow-[0_0_24px_rgba(37,211,102,0.45)] hover:scale-105 transition-all" href="https://wa.me/51933685462?text=Hola%20Ulianov,%20quiero%20consultar%20el%20stock%20KZ%20en%20Cusco" rel="noopener noreferrer" target="_blank"><span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-surface opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-on-surface"></span></span><span class="material-symbols-outlined text-body-lg">support_agent</span><span class="font-body-md text-body-sm font-bold">¿Dudas? Chatea al instante</span></a></div></body></html>
