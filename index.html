@@ -1740,8 +1740,8 @@ window.toggleVayoChat=function(open){const m=document.getElementById('vayotech-c
 window.handleUserChatSubmit=function(event){event.preventDefault();const area=document.getElementById('vayotech-chat-messages');const text=document.createElement('p');text.className='advisor-note';text.textContent='Puedes enviar tu consulta directamente a Ulianov por WhatsApp.';const link=document.createElement('a');link.className='advisor-button advisor-primary';link.target='_blank';link.rel='noopener noreferrer';link.href='https://wa.me/51918404281?text='+encodeURIComponent(document.getElementById('vayotech-user-input').value||'Hola Ulianov, necesito asesoria para elegir audifonos.');link.textContent='Consultar por WhatsApp';area.append(text,link);return false;};
 window.resetVayoChat=function(){document.getElementById('vayotech-user-input').value='';};
 </script>
-<script src="advisor-engine.js?v=2"></script>
-<script src="advisor.js?v=2"></script>
+<script src="advisor-engine.js?v=3"></script>
+<script src="advisor.js?v=3"></script>
 <div id="mobile-sales-bar"><a href="#catalogo">Ver catálogo</a><button onclick="toggleCartDrawer(true)" id="mobile-cart-label">Ver mi carrito</button></div>
 <script id="vayotech-shopping-controller">
 
