@@ -1852,5 +1852,153 @@
   </div>
 </div>
 
+<script id="vayotech-chat-controller">
+// VayoTech chatbot: UI, local guidance and lead notification.
+(() => {
+  'use strict';
+  const modal = document.getElementById('vayotech-chat-modal');
+  const overlay = document.getElementById('vayotech-chat-overlay');
+  const messages = document.getElementById('vayotech-chat-messages');
+  const input = document.getElementById('vayotech-user-input');
+  const launcher = document.getElementById('btn-vayotech-chat');
+  if (!modal || !overlay || !messages || !input || !launcher) return;
+  const greeting = messages.innerHTML;
+  let lastQuestion = '';
+  let previousFocus = null;
+  const status = document.createElement('p');
+  status.className = 'px-3 py-1 text-[10px] text-text-muted';
+  status.setAttribute('role', 'status');
+  status.setAttribute('aria-live', 'polite');
+  modal.insertBefore(status, document.getElementById('vayotech-chat-form'));
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-modal', 'true');
+  modal.setAttribute('aria-label', 'Asesor Virtual VayoTech');
+  launcher.setAttribute('aria-controls', modal.id);
+  launcher.setAttribute('aria-expanded', 'false');
+  input.maxLength = 2000;
+  const footer = modal.querySelector('.text-deal-emerald.font-bold');
+  if (footer) footer.textContent = 'Asesor automático';
+  const closeButton = modal.querySelector('button[onclick="toggleVayoChat(false)"]');
+  if (closeButton) closeButton.setAttribute('aria-label', 'Cerrar chat');
+
+  window.toggleVayoChat = function (open) {
+    const visible = typeof open === 'boolean' ? open : modal.classList.contains('hidden');
+    if (visible) {
+      previousFocus = document.activeElement;
+      modal.classList.remove('hidden', 'opacity-0', 'scale-95');
+      modal.classList.add('flex');
+      overlay.classList.remove('hidden', 'opacity-0');
+      launcher.setAttribute('aria-expanded', 'true');
+      input.focus();
+    } else {
+      modal.classList.add('hidden', 'opacity-0', 'scale-95');
+      modal.classList.remove('flex');
+      overlay.classList.add('hidden', 'opacity-0');
+      launcher.setAttribute('aria-expanded', 'false');
+      (previousFocus && previousFocus.isConnected ? previousFocus : launcher).focus();
+    }
+  };
+
+  function appendMessage(text, user) {
+    const row = document.createElement('div');
+    row.className = user ? 'flex justify-end' : 'flex justify-start';
+    const bubble = document.createElement('div');
+    bubble.className = 'p-3 rounded-2xl text-xs leading-relaxed max-w-[85%] whitespace-pre-wrap ' +
+      (user ? 'bg-secondary-container text-on-surface' : 'bg-surface-container text-on-surface');
+    bubble.textContent = text;
+    row.appendChild(bubble);
+    messages.appendChild(row);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  window.appendUserMessage = function (text) {
+    lastQuestion = String(text || '').trim().slice(0, 2000);
+    if (lastQuestion) appendMessage(lastQuestion, true);
+  };
+
+  function responseFor(question) {
+    const q = question.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    if (/wanchaq|entrega|delivery|envio|recojo|cusco/.test(q))
+      return 'Puedes recoger en el almacén de Wanchaq o elegir un punto de entrega en el carrito. Allí verás el costo correspondiente. Ulianov confirmará horario y disponibilidad por WhatsApp.';
+    if (/type.?c|tipo.?c|iphone|conector|dac/.test(q))
+      return 'Revisa los audífonos Type-C y los adaptadores con DAC del catálogo. Indica tu modelo de celular para confirmar compatibilidad antes de comprar.';
+    if (/gaming|gamer|dota|valorant|free fire|juegos|pasos/.test(q))
+      return 'Para gaming puedes comparar los KZ EDX Pro y Castor del catálogo. Dime tu presupuesto y si tu equipo usa entrada de 3.5 mm o Type-C para orientar la elección.';
+    if (/hifi|hi.fi|musica|voces|instrumento/.test(q))
+      return 'Para música puedes comparar Castor y ZSN Pro 2 en el catálogo. Cuéntanos qué música escuchas y tu presupuesto; Ulianov confirmará el modelo y stock.';
+    if (/mayor|lote|revend|pack/.test(q))
+      return 'En la página encontrarás packs y el lote completo. Indica modelos y cantidades; Ulianov confirmará stock y precio antes de cerrar el pedido.';
+    if (/pago|yape|plin|efectivo/.test(q))
+      return 'Selecciona el método de pago en el carrito. La solicitud no confirma un pago: coordina con Ulianov por WhatsApp antes de transferir.';
+    return 'Gracias por tu consulta. Este asesor ofrece orientación automática; Ulianov puede confirmar stock, compatibilidad y entrega por WhatsApp al +51 918 404 281.';
+  }
+
+  async function notifyLead(question) {
+    status.textContent = 'Enviando consulta a la tienda…';
+    try {
+      const response = await fetch(window.VAYOTECH_N8N_WEBHOOK ||
+        'https://cuba04.app.n8n.cloud/webhook/vayotech-pedidos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          tipo: 'consulta_chatbot',
+          idEvento: 'CHAT-' + (window.crypto && crypto.randomUUID ? crypto.randomUUID() :
+            Date.now() + '-' + Math.random().toString(36).slice(2)),
+          preguntaCliente: question,
+          timestamp: new Date().toISOString()
+        })
+      });
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      status.textContent = 'Consulta recibida para seguimiento. Para una respuesta directa, escríbenos por WhatsApp.';
+    } catch (error) {
+      status.textContent = 'No pudimos registrar la consulta. Escríbenos por WhatsApp al +51 918 404 281.';
+      console.warn('VayoTech: no se pudo registrar la consulta', error);
+    }
+  }
+
+  window.processBotResponse = function (topic) {
+    const question = lastQuestion || String(topic || '').trim();
+    lastQuestion = '';
+    if (!question) return;
+    appendMessage(responseFor(question), false);
+    void notifyLead(question);
+  };
+
+  window.handleUserChatSubmit = function (event) {
+    event.preventDefault();
+    const question = input.value.trim();
+    if (!question) return false;
+    window.appendUserMessage(question);
+    input.value = '';
+    window.processBotResponse(question);
+    return false;
+  };
+
+  window.resetVayoChat = function () {
+    messages.innerHTML = greeting;
+    lastQuestion = '';
+    input.value = '';
+    status.textContent = '';
+    input.focus();
+  };
+
+  modal.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      window.toggleVayoChat(false);
+    } else if (event.key === 'Tab') {
+      const focusable = Array.from(modal.querySelectorAll('button, input, a[href]'))
+        .filter(el => !el.disabled && el.getClientRects().length);
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault(); last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault(); first.focus();
+      }
+    }
+  });
+})();
+</script>
 </body>
 </html>
