@@ -1468,21 +1468,6 @@
       return;
     }
 
-    // Trigger n8n background webhook (no bloqueante)
-    if (window.VAYOTECH_N8N_WEBHOOK && window.VAYOTECH_N8N_WEBHOOK.startsWith('http')) {
-      fetch(window.VAYOTECH_N8N_WEBHOOK, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          tipo: 'nuevo_pedido',
-          items: state.cart,
-          deliveryPoint: state.deliveryPoint,
-          deliveryFee: state.deliveryFee,
-          timestamp: new Date().toISOString()
-        })
-      }).catch(() => {});
-    }
-
     let subtotal = 0;
     let lines = state.cart.map(i => {
       const lineCost = i.price * i.qty;
@@ -1492,7 +1477,25 @@
 
     const total = subtotal + state.deliveryFee;
     const paymentMethodEl = document.querySelector('input[name="payment-method"]:checked');
-    const payment = paymentMethodEl ? paymentMethodEl.value : 'Yape';
+    const payment = paymentMethodEl ? paymentMethodEl.value : 'Yape / Plin';
+
+    // Trigger n8n background webhook con datos completos del pedido
+    if (window.VAYOTECH_N8N_WEBHOOK && window.VAYOTECH_N8N_WEBHOOK.startsWith('http')) {
+      fetch(window.VAYOTECH_N8N_WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          tipo: 'nuevo_pedido',
+          items: state.cart,
+          subtotal: subtotal,
+          deliveryPoint: state.deliveryPoint,
+          deliveryFee: state.deliveryFee,
+          paymentMethod: payment,
+          total: total,
+          timestamp: new Date().toISOString()
+        })
+      }).catch(function() {});
+    }
 
     const msg = `👋 *¡Hola Ulianov! Vengo de la tienda VayoTech Cusco 2026*\n\n` +
       `*DETALLE DE MI PEDIDO KZ:*\n${lines}\n\n` +
