@@ -91,16 +91,20 @@ window.toggleVayoChat=function(open){
   (previousFocus?.isConnected?previousFocus:launcher).focus();
  }
 };
+const baseOpenModal=window.openModal;
+window.openModal=function(){baseOpenModal.apply(window,arguments);$('modal-add-btn').textContent='Añadir a mi carrito';};
 function showCart(){window.toggleVayoChat(false);window.toggleCartDrawer(true);}
 function viewCatalog(anchor='catalogo'){
  window.toggleVayoChat(false);
  if(window.clearCatalogFilters)window.clearCatalogFilters();
  document.getElementById(anchor)?.scrollIntoView({behavior:'smooth',block:'start'});
 }
-function showProduct(p){
+function showProduct(item){
+ const p=item.product;
  window.toggleVayoChat(false);
  window.openModal(p.name,[p.image],E.money(p.price),p.description);
- $('modal-add-btn').onclick=()=>{window.closeModal();window.addToCart(p.name,p.price,p.image);};
+ $('modal-add-btn').textContent=item.addon?'Agregar audífonos + DAC · '+E.money(item.total):'Añadir a mi carrito';
+ $('modal-add-btn').onclick=()=>{window.closeModal();addOffer(item);};
  $('product-modal').querySelector('button').focus();
 }
 function handoff(box){
@@ -144,7 +148,9 @@ function cards(items,kind){
   const description=document.createElement('p');description.textContent=o.reason;
   const connection=document.createElement('p');connection.className='advisor-compatibility';connection.textContent=o.warning;
   const mic=document.createElement('p');mic.className='advisor-source';mic.textContent=o.product.category==='accesorios'?'Accesorio del catálogo.':o.micKnown?'Micrófono indicado en el catálogo; confirma la versión.':'Micrófono: confirmar la versión antes de comprar.';
-  card.append(tag,head,description);
+  card.append(tag,head);
+  if(o.choiceReason){const why=document.createElement('p');why.className='advisor-why';why.textContent=o.choiceReason;card.append(why);}
+  card.append(description);
   if(o.addon){const breakdown=document.createElement('p');breakdown.className='advisor-breakdown';breakdown.textContent=E.money(o.product.price)+' audífonos + '+E.money(o.addon.price)+' adaptador DAC = '+E.money(o.total);card.append(breakdown);}
   if(prefs.totalBudget&&prefs.deliveryFee!==null){
    const delivered=document.createElement('p');delivered.className='advisor-breakdown';delivered.textContent='Con entrega en '+prefs.location+': '+E.money(o.total+prefs.deliveryFee);card.append(delivered);
@@ -153,7 +159,7 @@ function cards(items,kind){
   const source=document.createElement('a');source.className='advisor-reference';source.href='#'+o.product.anchor;source.textContent='Referencia: ficha de '+o.product.name;source.onclick=event=>{event.preventDefault();viewCatalog(o.product.anchor);};
   card.append(source);
   const actions=document.createElement('div');actions.className='advisor-product-actions';
-  actions.append(button(o.product.id==='az09'?'Consultar pines':o.addon?'Agregar audífonos + DAC':'Agregar al carrito',()=>addOffer(o),true),button('Ver ficha',()=>showProduct(o.product)));
+  actions.append(button(o.product.id==='az09'?'Consultar pines':o.addon?'Agregar audífonos + DAC':'Agregar al carrito',()=>addOffer(o),true),button('Ver ficha',()=>showProduct(o)));
   card.append(actions);messages.append(card);
  });
  scroll();
